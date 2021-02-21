@@ -1,0 +1,55 @@
+.wrapper {
+    width: 570px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.title {
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.blockCalculation {
+    height: 180px;
+    width: 100%;
+    border: 1px solid #B4B4B5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blockTotal {
+    height: 91px;
+    width: 100%;
+    border: 1px solid #B4B4B5;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 470px;
+    margin: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    float: right;
+    width: 250px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: #3CB878;
+    font-weight: 700;
+    outline: none !important;
+}
+
+.button:active {
+    background-color: #34a369;
+}

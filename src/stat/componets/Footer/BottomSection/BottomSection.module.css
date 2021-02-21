@@ -1,0 +1,30 @@
+.wrapper {
+    height: 60px;
+    width: 1500px;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B4B4B5;
+}
+
+.text {
+    font-size: 12px;
+    width: 830px;
+}
+
+.buttons {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #3CB878;
+}
