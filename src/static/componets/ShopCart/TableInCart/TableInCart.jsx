@@ -11,6 +11,11 @@ const TableInCart = (props) => {
                                                                         value={product.value} id={product.id}
                                                                         onChangeProductValue={props.onChangeProductValue}
                                                                         onProductDelete={props.onProductDelete}/>)
+    if (props.cartProduct.length === 0) {
+        return <div className={s.cartNull}>
+            your cart is empty
+        </div>
+    }
 
     return (
         <div className={s.wrapper}>

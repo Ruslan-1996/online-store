@@ -3,7 +3,6 @@ import React from "react";
 
 
 const ProductInCart = (props) => {
-
     let onChangeValue = (e) => {
         let value = e.target.value;
         props.onChangeProductValue(value, props.id)
@@ -24,7 +23,7 @@ const ProductInCart = (props) => {
                     <div>Color: Black</div>
                 </div>
                 <div className={`${s.quantity} ${s.item}`}>
-                    <input type='number' min='0' className={s.input} onChange={onChangeValue} value={props.value}/>
+                    <input type='number' min='0' max='100' className={s.input} onChange={onChangeValue} value={props.value}/>
                 </div>
                 <div className={`${s.price} ${s.item}`}>${props.cost}</div>
                 <div className={`${s.total} ${s.item}`}>

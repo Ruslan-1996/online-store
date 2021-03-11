@@ -43,6 +43,8 @@ export const onNameEmailActionCreator = (text) => {
         text: text,
     }
 }
+
+
 //
 // window.initialState = initialState;
 

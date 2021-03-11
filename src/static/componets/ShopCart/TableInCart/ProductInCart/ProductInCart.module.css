@@ -59,10 +59,16 @@
 .total {
     grid-area: total;
     border-right: 1px solid #B4B4B5;
+    justify-content: center;
 }
 
+.totalPrice {
+    width: 110px;
+    overflow: auto;
+}
+
+
 .delete {
-    margin-left: 75px;
     height: 16px;
     width: 16px;
     border: 2px solid black;

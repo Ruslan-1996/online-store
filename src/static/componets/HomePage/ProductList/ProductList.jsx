@@ -5,7 +5,8 @@ import Product from "../Product/Product";
 const ProductList = (props) => {
 
     let products = props.product.map(product => <Product id={product.id} nameProduct={product.nameProduct}
-                                                         cost={product.cost} key={product.id}/>);
+                                                         cost={product.cost} key={product.id}
+                                                         onChange={props.onChange}/>);
 
     return (
         <div className={s.wrapper}>

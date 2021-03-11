@@ -5,6 +5,7 @@ import GiftVoucher from "./CouponsCode/GiftVoucher";
 import ShoppingCartCalculator from "./ShoppingCartCalculator/ShoppingCartCalculator";
 import TableInCartContainer from "./TableInCart/TableInCartContainer";
 import ShippingAvailabilityContainer from "./ShippingAvailability/ShippingAvailabilityContainer";
+import ShoppingCartCalculatorContainer from "./ShoppingCartCalculator/ShoppingCartCalculatorContainer";
 
 
 const ShopCart = () => {
@@ -17,7 +18,7 @@ const ShopCart = () => {
             </div>
             <div className={`${s.orderCheck} ${s.article}`}>
                 <ShippingAvailabilityContainer/>
-                <ShoppingCartCalculator/>
+                <ShoppingCartCalculatorContainer/>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import React from "react";
 import {faBehance, faFacebookF, faInstagram, faLinkedinIn, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {NavLink} from "react-router-dom";
 
-let Header = () => {
+let Header = (props) => {
     return (
         <header className={s.header}>
             <div className={s.topHeader}>
@@ -33,7 +33,9 @@ let Header = () => {
                 </div>
             </div>
             <div className={s.bottomHeader}>
-                <span className={s.siteLogo}><span className={s.textGreen}>RENOSHOP</span>BEE</span>
+                <NavLink to={'/'} className={s.navItem}>
+                    <span className={s.siteLogo}><span className={s.textGreen}>RENOSHOP</span>BEE</span>
+                </NavLink>
                 <span className={s.navMenu}>
                     <NavLink to='/home' className={s.navItem} activeClassName={s.active}>HOME</NavLink>
                     <NavLink to='/women' className={s.navItem} activeClassName={s.active}>WOMEN</NavLink>
@@ -45,7 +47,7 @@ let Header = () => {
                 <span className={s.navRight}>
                      <NavLink to='/cart'>
                          <FontAwesomeIcon icon={faShoppingCart} className={s.shoppingCart}/>
-                         <div className={s.numberOrder}>3</div>
+                         <div className={s.numberOrder}>{props.cartProductLength}</div>
                      </NavLink>
                     <FontAwesomeIcon icon={faSearch} className={s.iconSearch}/>
                     <div className={s.burger}>

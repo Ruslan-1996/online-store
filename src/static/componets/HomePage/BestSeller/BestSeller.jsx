@@ -3,9 +3,10 @@ import React from "react";
 import Product from "../Product/Product";
 
 let BestSeller = (props) => {
-
     let bestProduct = props.bestProduct.map(product => <Product nameProduct={product.nameProduct} cost={product.cost}
-                                                                size={product.size} key={product.id}/>)
+                                                                size={product.size} key={product.id}
+                                                                id={product.id}
+                                                                onChange={props.onChange}/>)
 
 
     return (

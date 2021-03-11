@@ -42,11 +42,6 @@
     background-color: white;
 }
 
-.image:hover .sizeIcon{
-    position: relative;
-    /*align-self: center;*/
-}
-
 .iconHover {
     font-size: 18px;
     color: white;
@@ -58,12 +53,6 @@
 
 .price {
     color: green;
-}
-
-.sizeIcon {
-    top: 70px;
-    right: 120px;
-    color: white;
 }
 
 .iconStar {

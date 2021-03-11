@@ -9,7 +9,7 @@ const ShoppingCartCalculator = (props) => {
             <div className={s.blockCalculation}>
                 <div className={s.item}>
                     <span>Subtotal</span>
-                    <span>$450</span>
+                    <span>{props.subtotal}</span>
                 </div>
                 <div className={s.item}>
                     <span>Coupon</span>
