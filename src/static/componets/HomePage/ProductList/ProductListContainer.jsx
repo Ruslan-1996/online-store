@@ -1,8 +1,8 @@
 import React from "react";
 import ProductList from "./ProductList";
 import {connect} from "react-redux";
-import BestSeller from "../BestSeller/BestSeller";
-import {addProductInCart} from "../../../../store/shopCartPage";
+import {addProductInCart, onProductDelete} from "../../../../store/shopCartPage";
+import {onToggleProductInCart} from "../../../../store/homePageReducer";
 
 
 class ProductListContainer extends React.Component {
@@ -22,6 +22,6 @@ let mapStateToProps = (state) => {
 }
 
 
-const ProductContainer = connect(mapStateToProps, {addProductInCart})(ProductListContainer)
+const ProductContainer = connect(mapStateToProps, {addProductInCart, onToggleProductInCart, onProductDelete})(ProductListContainer)
 
 export default ProductContainer;

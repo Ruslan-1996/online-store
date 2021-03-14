@@ -1,3 +1,13 @@
 .app{
     font-family: "Century Gothic", sans-serif;
+    height: 100%;
 }
+
+.pageWrapper {
+    min-height: calc(100vh - 465px);
+}
+
+.footer {
+
+}
+

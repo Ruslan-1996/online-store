@@ -4,6 +4,7 @@ const UPDATE_POSTCODE_TEXT = 'UPDATE_POSTCODE_TEXT';
 const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 const PRODUCT_DELETE = 'PRODUCT_DELETE';
 const ADD_PRODUCT_IN_CART = 'ADD_PRODUCT_IN_CART';
+const CHANGE_SUBTOTAL = 'CHANGE_SUBTOTAL';
 
 let initialState = {
     cartProduct: [
@@ -17,10 +18,6 @@ let initialState = {
     subtotal: '',
 }
 
-if (initialState.cartProduct.length > 0) {
-    initialState.cartProduct[0].size = '80х100'
-}
-;
 
 
 const shopCartPageReducer = (state = initialState, action) => {
@@ -40,16 +37,20 @@ const shopCartPageReducer = (state = initialState, action) => {
                 ...state,
                 postcode: action.text,
             }
-        case CHANGE_INPUT_VALUE:
+        case CHANGE_SUBTOTAL:
             let subtotal;
             if (state.cartProduct.length === 0) {
                 subtotal = 0;
             } else {
                 for (let i = 0; i < state.cartProduct.length; i++) {
-                    subtotal = subtotal + Number(state.cartProduct[i].totalCost);
+                    subtotal += Number(state.cartProduct[i].totalCost);
                 }
             }
-
+            return {
+                ...state,
+                subtotal: subtotal
+            }
+        case CHANGE_INPUT_VALUE:
             return {
                 ...state,
                 cartProduct: state.cartProduct.map(product => {
@@ -63,7 +64,6 @@ const shopCartPageReducer = (state = initialState, action) => {
                         return product
                     }
                 ),
-                subtotal: subtotal,
             }
         case PRODUCT_DELETE:
             return {
@@ -74,13 +74,14 @@ const shopCartPageReducer = (state = initialState, action) => {
             debugger
             let product;
             if (state.cartProduct.length === 0) {
-                product = [...state.cartProduct, {
+                product = [{
                     id: action.id,
                     nameProduct: action.nameProduct,
                     cost: action.cost,
                     totalCost: action.totalCost,
                     value: 1,
                     productInCart: true,
+                    size: '80х100'
                 }]
             } else {
                 state.cartProduct.some((array) => {
@@ -150,6 +151,12 @@ export const addProductInCart = (id, nameProduct, cost, totalCost) => {
     }
 }
 
+
+export const changeSubtotal = () => {
+    return {
+        type: CHANGE_SUBTOTAL,
+    }
+}
 
 window.initialState = initialState;
 

@@ -4,13 +4,16 @@ import ProductInCart from "./ProductInCart/ProductInCart";
 
 
 const TableInCart = (props) => {
-
+    debugger
     let productInCart = props.cartProduct.map(product => <ProductInCart nameProduct={product.nameProduct}
                                                                         cost={product.cost} key={product.id}
                                                                         totalCost={product.totalCost}
                                                                         value={product.value} id={product.id}
+                                                                        size={product.size}
                                                                         onChangeProductValue={props.onChangeProductValue}
-                                                                        onProductDelete={props.onProductDelete}/>)
+                                                                        onProductDelete={props.onProductDelete}
+                                                                        onToggleProductInCart={props.onToggleProductInCart}
+                                                                        changeSubtotal={props.changeSubtotal}/>)
     if (props.cartProduct.length === 0) {
         return <div className={s.cartNull}>
             your cart is empty

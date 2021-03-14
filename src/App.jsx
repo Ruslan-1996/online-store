@@ -1,16 +1,16 @@
 import React from 'react';
 import s from './App.module.css'
 import './css/fontawesome.min.css'
-import Header from "./static/componets/Header/Header";
 import Footer from "./static/componets/Footer/Footer";
 import HomePage from "./static/componets/HomePage/HomePage";
 import {Route} from "react-router-dom";
 import ShopCart from "./static/componets/ShopCart/ShopCart";
 import HeaderContainer from "./static/componets/Header/HeaderContainer";
 
-const App = (props) => {
+const App = () => {
     return (
             <div className={s.app}>
+                <div className={s.pageWrapper}>
                 <HeaderContainer/>
                 <div>
                     <Route path='/home' render={ () => <HomePage/>}/>
@@ -21,7 +21,8 @@ const App = (props) => {
                     <Route path='/accessories' render={ () => <HomePage/>}/>
                     <Route path='/cart' render={ () => <ShopCart/>}/>
                 </div>
-                <Footer/>
+                </div>
+                <Footer className={s.footer}/>
             </div>
     );
 }

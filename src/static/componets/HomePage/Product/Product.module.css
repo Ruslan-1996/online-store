@@ -59,3 +59,16 @@
     color: orange;
     margin-right: 2px;
 }
+
+.image:hover .addHover.active {
+    background-color: white;
+}
+
+.check {
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    border: solid #3CB878;
+    border-width: 0 5px 5px 0;
+    transform: rotate( 45deg);
+}

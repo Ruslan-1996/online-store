@@ -6,16 +6,18 @@ const ProductInCart = (props) => {
     let onChangeValue = (e) => {
         let value = e.target.value;
         props.onChangeProductValue(value, props.id)
+        props.changeSubtotal()
     }
 
     let onProductDelete = () => {
         props.onProductDelete(props.id)
+        props.onToggleProductInCart(props.id)
     }
 
     return (
             <div className={s.wrapper}>
                 <div className={`${s.products} ${s.item}`}>
-                    <div className={s.image}>80х100</div>
+                    <div className={s.image}>{props.size}</div>
                     <div className={s.nameProduct}>{props.nameProduct}</div>
                 </div>
                 <div className={`${s.color} ${s.item}`}>

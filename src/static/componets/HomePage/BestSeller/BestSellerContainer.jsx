@@ -1,7 +1,8 @@
 import React from "react";
 import BestSeller from "./BestSeller";
 import {connect} from "react-redux";
-import {addProductInCart} from "../../../../store/shopCartPage";
+import {addProductInCart, onProductDelete} from "../../../../store/shopCartPage";
+import {onToggleProductInCart} from "../../../../store/homePageReducer";
 
 
 class BestSellerClass extends React.Component {
@@ -22,6 +23,6 @@ let mapStateToProps = (state) => {
 }
 
 
-const BestSellerContainer = connect(mapStateToProps, {addProductInCart})(BestSellerClass)
+const BestSellerContainer = connect(mapStateToProps, {addProductInCart, onToggleProductInCart, onProductDelete})(BestSellerClass)
 
 export default BestSellerContainer;

@@ -6,7 +6,10 @@ let BestSeller = (props) => {
     let bestProduct = props.bestProduct.map(product => <Product nameProduct={product.nameProduct} cost={product.cost}
                                                                 size={product.size} key={product.id}
                                                                 id={product.id}
-                                                                onChange={props.onChange}/>)
+                                                                onChange={props.onChange}
+                                                                inCart={product.inCart}
+                                                                onProductDelete={props.onProductDelete}
+                                                                onToggleProductInCart={props.onToggleProductInCart}/>)
 
 
     return (

@@ -6,7 +6,10 @@ const ProductList = (props) => {
 
     let products = props.product.map(product => <Product id={product.id} nameProduct={product.nameProduct}
                                                          cost={product.cost} key={product.id}
-                                                         onChange={props.onChange}/>);
+                                                         onChange={props.onChange}
+                                                         inCart={product.inCart}
+                                                         onProductDelete={props.onProductDelete}
+                                                         onToggleProductInCart={props.onToggleProductInCart}/>);
 
     return (
         <div className={s.wrapper}>
