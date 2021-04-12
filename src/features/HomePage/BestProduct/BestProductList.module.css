@@ -1,0 +1,41 @@
+.wrapper {
+    width: 100%;
+    height: 715px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapperContent {
+    margin-left: 70px;
+    float: left;
+    width: 1375px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article {
+    width: 345px;
+    height: 170px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products {
+    width: 1030px;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.subtitle {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+    color: #3cb878;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
