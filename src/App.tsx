@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './App.module.css'
-import './styles/fontawesome.min.css'
 import Footer from "./features/Footer/Footer";
 import HomePage from "./features/HomePage/HomePage";
 import {Redirect, Route} from "react-router-dom";
