@@ -1,6 +1,6 @@
 .wrapper {
     height: 60px;
-    width: 1500px;
+    width: 100%;
     margin: 0 auto;
     background-color: black;
     display: flex;
@@ -8,10 +8,15 @@
     align-items: center;
     color: #B4B4B5;
 }
+.container{
+    width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .text {
     font-size: 12px;
-    width: 830px;
 }
 
 .buttons {
@@ -27,4 +32,30 @@
 
 .button:hover {
     color: #3CB878;
+}
+
+@media screen and (max-width: 1500px){
+    .container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .wrapper {
+        height: 80px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text {
+        width: 300px;
+    }
+
+    .buttons {
+        width: 300px;
+        justify-content: space-between;
+    }
 }

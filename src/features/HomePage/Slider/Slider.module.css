@@ -3,13 +3,14 @@
     height: 800px;
     background-color: #121212;
     color: #646464;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wrapper{
-    margin-left: 350px;
-    padding-top: 275px;
+.wrapper {
     width: 615px;
-    height: 370px;
+    height: 250px;
     box-sizing: content-box;
 }
 
@@ -27,27 +28,47 @@
 .button {
     width: 118px;
     height: 35px;
-    background-color: #121212;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #646464;
     border: 1px solid #646464;
+    border-left: none;
     outline: none !important;
     cursor: pointer;
 }
 
+
 .button:hover {
     border: 1px solid #3CB878;
     color: #3CB878;
+    border-left: none;
 }
 
-.button::after{
+
+
+.button:after {
     content: '';
-    height: 14px;
-    font-size: 10px;
-    border-left: 5px solid #121212;
-    background-color: #121212;
+    font-size: 9px;
+    border-left: 1px solid #646464;
+    background-color: #646464;
     position: relative;
-    right: 95px;
-    bottom: 2.5px;
+    right: 91.1px;
+    bottom: 13px;
+}
+
+.button:before {
+    content: '';
+    font-size: 9px;
+    border-left: 1px solid #646464;
+    background-color: #646464;
+    position: relative;
+    right: 24.8px;
+    top: 9.5px;
+}
+
+.button:hover:before,
+.button:hover:after{
+    border-left: 1px solid #3CB878;
+    background-color: #3CB878;
 }
 
 .sizeImage {
@@ -55,4 +76,43 @@
     margin-top: 105px;
     display: flex;
     justify-content: flex-end;
+}
+
+@media screen and (max-width: 1500px) {
+
+    .article {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .homePage {
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .title {
+        width: 50vw;
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .wrapper {
+        width: 400px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 451px) {
+    .title{
+        width: 70vw;
+    }
+
+    .wrapper {
+        width: 300px;
+    }
 }

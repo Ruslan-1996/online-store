@@ -10,3 +10,19 @@
     justify-content: space-between;
     padding-top: 65px;
 }
+
+@media screen and (max-width: 1500px){
+    .article {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .article {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding-bottom: 30px;
+    }
+}

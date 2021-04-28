@@ -74,3 +74,62 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@media screen and (max-width: 1500px){
+    .wrapper {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .clients,
+    .promocode {
+        width: 100%;
+        height: 50%;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .wrapper {
+        height: 420px;
+    }
+
+    .promocode {
+        height: 60%;
+    }
+
+    .clients {
+        height: 40%;
+    }
+
+    .formWrapper {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .formInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promocodeFeature {
+        width: 80vw;
+    }
+
+    .input {
+        width: 80vw;
+        margin: 0;
+    }
+
+    .button {
+        margin-top: 5px;
+        width: 80vw;
+    }
+
+    .imgClients {
+        width: 70px;
+    }
+}

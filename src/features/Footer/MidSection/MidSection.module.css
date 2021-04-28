@@ -1,9 +1,16 @@
+@import '~antd/dist/antd.dark.css';
+@import '~antd/dist/antd.compact.css';
+
 .wrapper {
     height: 345px;
     width: 1180px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
+
+.carouselWrapper {
+    display: none;
 }
 
 .block {
@@ -37,4 +44,31 @@
 
 .mail {
     color: #3CB878;
+}
+
+@media screen and (max-width: 1500px){
+    .wrapper {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 769px){
+
+    .wrapper{
+        display: none;
+    }
+
+    .carouselWrapper {
+        display: block;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carouselBlock {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        margin-bottom: 20px;
+    }
 }

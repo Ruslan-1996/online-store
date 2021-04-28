@@ -1,4 +1,4 @@
-.app{
+.app {
     font-family: "Century Gothic", sans-serif;
     height: 100%;
     width: 1500px;
@@ -7,4 +7,28 @@
 
 .pageWrapper {
     min-height: calc(100vh - 465px);
+}
+
+@media screen and (max-width: 1500px) {
+    .app {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .content {
+        padding-top: 100px;
+    }
+
+    .app.active {
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 481px) {
+
+    .content {
+        padding-top: 50px;
+    }
+
 }

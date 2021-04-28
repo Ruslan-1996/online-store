@@ -6,7 +6,8 @@ import {faBehance, faFacebookF, faInstagram, faLinkedinIn, faTwitter} from "@for
 
 let SocialConnection = () => {
     return (
-            <div className={s.wrapper}>
+        <div className={s.wrapper}>
+            <div className={s.container}>
                 <div className={s.text}>
                     We're confident we've provided all the best for you. Stay connect with us
                 </div>
@@ -23,6 +24,7 @@ let SocialConnection = () => {
                                      className={`${s.iconInHeader} ${s.iconNetwork} ${s.iconBehance}`}/>
                 </div>
             </div>
+        </div>
     )
 }
 

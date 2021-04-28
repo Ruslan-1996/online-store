@@ -1,5 +1,8 @@
+import {homePageAPI, homePageCategories} from "../api/homePageAPI";
+
 const UPDATE_NAME_EMAIL = 'online-store/home-page/UPDATE_NAME_EMAIL';
 const SET_ASSESSMENT = 'online-store/home-page/SET_ASSESSMENT';
+const GET_CATEGORIES = 'online-store/home-page/GET_CATEGORIES'
 
 export type ProductType = {
     id: number
@@ -53,7 +56,6 @@ const homePageReducer = (state = initialState, action: HomePageReducerType): Ini
 }
 
 
-
 type HomePageReducerType = OnNameEmailActionCreatorType | SetAssessmentType
 
 type OnNameEmailActionCreatorType = {
@@ -61,13 +63,13 @@ type OnNameEmailActionCreatorType = {
     text: string
 }
 
+
 export const onNameEmailActionCreator = (text: string): OnNameEmailActionCreatorType => {
     return {
         type: UPDATE_NAME_EMAIL,
         text: text,
     }
 }
-
 
 
 type SetAssessmentType = {

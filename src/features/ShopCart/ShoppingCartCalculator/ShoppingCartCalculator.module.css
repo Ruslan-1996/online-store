@@ -53,3 +53,28 @@
 .button:active {
     background-color: #34a369;
 }
+
+@media screen and (max-width: 1500px) {
+
+    .wrapper {
+        width: 45vw;
+    }
+
+    .item {
+        width: 85%;
+    }
+
+}
+
+@media screen and (max-width: 1025px){
+    .wrapper {
+        margin-top: 35px;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .wrapper {
+        width: 90vw;
+    }
+}

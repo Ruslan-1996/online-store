@@ -86,3 +86,56 @@
 .delete:active {
     background-color: #eeeeee;
 }
+
+@media screen and (max-width: 1025px) {
+    .wrapper {
+        /*grid-template-areas:*/
+        /*        'products'*/
+        /*        'color quantity'*/
+        /*        'price total';*/
+        /*grid-template-columns: 41fr 19fr 17fr 18fr 19fr;*/
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border: 1px solid #B4B4B5;
+    }
+
+    .color {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: 1px solid #B4B4B5;
+    }
+
+    .quantity {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: 1px solid #B4B4B5;
+    }
+
+    .price {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: 1px solid #B4B4B5;
+    }
+
+    .total {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: 1px solid #B4B4B5;
+    }
+
+}
+

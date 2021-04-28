@@ -82,3 +82,34 @@
     top: 220px;
     left: 130px;
 }
+
+@media screen and (max-width: 769px){
+
+    .wrapper {
+        height: 367px;
+        width: 200px;
+        margin: 20px 10px 20px 10px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .image:hover .addHover {
+        height: 30px;
+        width: 30px;
+        margin: 8px 8px 0 0;
+    }
+
+    .iconHover {
+        font-size: 14px;
+    }
+
+    .check {
+        width: 9px;
+        height: 15px;
+        border-width: 0 4px 4px 0;
+    }
+
+}

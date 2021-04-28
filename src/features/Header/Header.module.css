@@ -1,9 +1,9 @@
 .header {
     width: 100%;
-    box-shadow: 0 3px 5px rgba(122,122,122,0.1);
+    box-shadow: 0 3px 5px rgba(122, 122, 122, 0.1);
 }
 
-.textGreen{
+.textGreen {
     color: #3CB878;
 }
 
@@ -83,32 +83,37 @@
     color: #1666F7;
 }
 
-.bottomHeader{
+.bottomHeader {
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 
 .siteLogo {
+    color: black;
     margin-left: 50px;
     font-size: 17px;
     font-weight: 700;
+    text-decoration: none;
 }
 
-.navMenu{
+.navMenu {
     width: 640px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
 }
 
 .navItem {
     color: black;
-    text-decoration: none;
 }
 
-.navItem:hover{
+.siteLogo:hover,
+.navItem:hover {
     color: black;
     text-decoration: none;
 }
@@ -117,9 +122,9 @@
     color: #3CB878;
 }
 
-.navRight{
-    width: 105px;
+.navRight {
     margin-right: 50px;
+    width: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,36 +167,138 @@
 }
 
 .burger {
-    display: block;
+    display: none;
     position: relative;
     width: 16px;
     height: 14px;
     color: #646464;
 }
 
-.burger span{
-    position: absolute;
-    background-color: #646464;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 6px;
+@media screen and (max-width: 1025px) {
+    .header {
+        position: fixed;
+        z-index: 2;
+    }
+
+    .topHeader {
+        height: 50px;
+    }
+
+    .bottomHeader {
+        height: 50px;
+    }
+
+    .navMenu {
+        padding-top: 30px;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        min-height: 1000px;
+        /*height: auto;*/
+        margin: 99px 0 0 0;
+        background-color: white;
+        transition: 0.3s;
+        overflow: auto;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        font-size: 20px;
+        border-top: 2px solid black;
+    }
+
+    .navItem {
+        margin: 10px 0 10px 50px;
+    }
+
+    .navMenu.isActive {
+        right: -0%;
+        top: 0;
+    }
+
+    .navRight {
+        width: 100px;
+    }
+
+    .burger {
+        display: block;
+        width: 16px;
+        height: 16px;
+        color: #646464;
+    }
+
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 7px;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+    }
+
+    .burger.active span {
+        transform: scale(0);
+    }
+
+    .burger:before,
+    .burger:after {
+        content: '';
+        background-color: #646464;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        z-index: 3;
+        transition: 0.3s;
+    }
+
+    .burger span {
+        position: absolute;
+        background-color: #646464;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 7px;
+        z-index: 3;
+    }
+
+    .burger:before {
+        top: 0;
+    }
+
+    .burger:after {
+        bottom: 0;
+    }
+
 }
 
-.burger::before, .burger::after {
-    content: '';
-    background-color: #646464;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
+@media screen and (max-width: 769px) {
+
+    .networks {
+        display: none;
+    }
+
+    .contacts {
+        width: 100%;
+        padding: 0 50px 0 50px;
+        margin: 0;
+        justify-content: space-between;
+    }
+
 }
 
-.burger::after {
-    bottom: 0;
-}
+@media screen and (max-width: 481px) {
 
-.burger::before {
-    top:0;
-}
+    .topHeader {
+        display: none;
+    }
 
+    .navMenu {
+        margin-top: 50px;
+    }
+
+}

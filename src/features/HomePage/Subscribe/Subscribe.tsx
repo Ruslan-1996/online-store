@@ -5,7 +5,6 @@ import img_2 from "../../../static/brand-logo-1a.png"
 import img_3 from "../../../static/brand-logo-2a.png"
 import img_4 from "../../../static/brand-logo-3a.png"
 import {Field, Form} from "react-final-form";
-import {onNameEmailActionCreator} from "../../../store/homePageReducer";
 
 type PropsType = {
     onNameEmailActionCreator: (text: string) => void
@@ -46,7 +45,7 @@ let Subscribe: React.FC<PropsType> = (props) => {
                                          type='mail'>
                                       {({input, meta}) => (
                                           <div className={s.formWrapper}>
-                                              <span>
+                                              <span className={s.formInput}>
                                               <input {...input} type="text" className={s.input} placeholder={'E-mail address...'}/>
                                               <button className={s.button}>GET COUPON NOW</button>
                                                   </span>
@@ -61,10 +60,10 @@ let Subscribe: React.FC<PropsType> = (props) => {
                 </div>
             </div>
             <div className={s.clients}>
-                <div><img src={img_1} alt="clients"/></div>
-                <div><img src={img_2} alt="clients"/></div>
-                <div><img src={img_3} alt="clients"/></div>
-                <div><img src={img_4} alt="clients"/></div>
+                <div><img src={img_1} className={s.imgClients} alt="clients"/></div>
+                <div><img src={img_2} className={s.imgClients} alt="clients"/></div>
+                <div><img src={img_3} className={s.imgClients} alt="clients"/></div>
+                <div><img src={img_4} className={s.imgClients} alt="clients"/></div>
             </div>
         </div>
     )

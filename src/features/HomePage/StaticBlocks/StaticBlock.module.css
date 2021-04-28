@@ -1,12 +1,12 @@
 .wrapper {
-    width: 1500px;
+    width: 100%;
     height: 200px;
     display: flex;
     justify-content: space-between;
 }
 
 .block {
-    width: 374px;
+    width: 24.95%;
     height: 100%;
     background-color: #F5F6F9;
     display: flex;
@@ -36,4 +36,25 @@
     font-size: 10px;
     margin-bottom: 0;
     color: #B4B4B5;
+}
+
+@media screen and (max-width: 767px){
+    .wrapper {
+        height: 140px;
+    }
+
+    .icon {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .feature {
+        font-size: 9px;
+        text-align: center;
+    }
 }

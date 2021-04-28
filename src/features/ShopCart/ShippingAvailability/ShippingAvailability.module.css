@@ -39,3 +39,25 @@
 .button:active {
     background-color: #B4B4B5;
 }
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        width: 45vw;
+    }
+
+    .input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .wrapper {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .wrapper {
+        width: 90vw;
+    }
+}

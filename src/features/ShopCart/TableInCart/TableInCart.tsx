@@ -11,7 +11,6 @@ type PropsType = {
 }
 
 const TableInCart: React.FC<PropsType> = (props) => {
-    debugger
     let productInCart = props.cartProduct.map(product => <ProductInCart name={product.name}
                                                                         cost={product.cost} key={product.id}
                                                                         totalCost={product.totalCost}

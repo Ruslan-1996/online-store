@@ -9,8 +9,13 @@
     font-weight: 700;
 }
 
+p{
+    margin: 0;
+}
+
 .text {
     color: #646464;
+    margin-bottom: 14px;
 }
 
 .input,
@@ -35,4 +40,62 @@
 
 .button:active {
     background-color: #34a369;
+}
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        width: 45vw;
+    }
+
+    .input{
+        width: 37vw;
+    }
+
+    .button {
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .wrapper {
+        width: 80vw;
+    }
+
+    .input{
+        width: 70vw;
+    }
+
+    .button {
+        width: 10vw;
+    }
+
+    .title {
+        margin: 35px 0 0 0;
+    }
+
+    .text {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .wrapper {
+        width: 90vw;
+    }
+
+    .input{
+        width: 70vw;
+    }
+
+    .button {
+        width: 20vw;
+    }
+
+    .title {
+        margin: 35px 0 0 0;
+    }
+
+    .text {
+        margin-bottom: 5px;
+    }
 }

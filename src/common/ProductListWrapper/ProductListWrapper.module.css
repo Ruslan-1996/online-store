@@ -1,6 +1,29 @@
 .wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.wrapper:after {
+    content: '';
+    width: 330px;
+}
+
+
+@media screen and (max-width: 1501px) {
+    .wrapper {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .wrapper {
+        justify-content: center;
+    }
+
+    .wrapper:after {
+        content: '';
+        width: 220px;
+    }
 }

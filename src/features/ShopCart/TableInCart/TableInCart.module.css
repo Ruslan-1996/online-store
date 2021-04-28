@@ -89,3 +89,24 @@
 .updateCart:active {
     background-color: #eeeeee;
 }
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .wrapper {
+        margin-top: 30px;
+    }
+
+    .table {
+        display: none;
+    }
+}
