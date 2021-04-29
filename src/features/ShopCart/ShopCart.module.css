@@ -22,6 +22,10 @@
         flex-direction: column;
     }
 
+    .couponsCode {
+        padding-top: 30px;
+    }
+
     .wrapper {
         padding-bottom: 30px;
     }

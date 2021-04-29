@@ -58,7 +58,7 @@ p{
 
 @media screen and (max-width: 1025px){
     .wrapper {
-        width: 80vw;
+        width: 90vw;
     }
 
     .input{
@@ -66,7 +66,7 @@ p{
     }
 
     .button {
-        width: 10vw;
+        width: 20vw;
     }
 
     .title {

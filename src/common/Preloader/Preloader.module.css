@@ -1,6 +1,6 @@
 .wrapper {
-    margin-left: calc(50vw - 240px);
-    margin-top: calc(50vh - 35px);
+    margin: 0 auto;
+    padding-top: calc(50vh - 35px);
     height: 70px;
     width: 480px;
     display: flex;
@@ -58,8 +58,7 @@
 
 @media screen and (max-width: 769px) {
     .wrapper {
-        margin-left: calc(50vw - 150px);
-        margin-top: calc(50vh - 25px);
+        padding-top: calc(50vh - 25px);
         height: 50px;
         width: 300px;
         display: flex;

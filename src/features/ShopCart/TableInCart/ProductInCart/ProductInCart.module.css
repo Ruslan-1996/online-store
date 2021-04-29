@@ -73,6 +73,7 @@
     width: 20px;
     border: 2px solid black;
     border-radius: 50%;
+    padding: 0px;
     font-size: 16px;
     font-weight: 900;
     background-color: white;
@@ -87,14 +88,22 @@
     background-color: #eeeeee;
 }
 
+@media screen and (max-width: 1500px) {
+
+    .nameProduct {
+        margin-left: 20px;
+        width: 200px;
+    }
+
+}
+
 @media screen and (max-width: 1025px) {
     .wrapper {
-        /*grid-template-areas:*/
-        /*        'products'*/
-        /*        'color quantity'*/
-        /*        'price total';*/
-        /*grid-template-columns: 41fr 19fr 17fr 18fr 19fr;*/
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item {
+        height: 64px;
     }
 
     .products {
@@ -103,6 +112,8 @@
         grid-row-start: 1;
         grid-row-end: 2;
         border: 1px solid #B4B4B5;
+        border-bottom: none;
+        height: 150px;
     }
 
     .color {
@@ -137,5 +148,16 @@
         border: 1px solid #B4B4B5;
     }
 
+    .totalPrice {
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width: 469px) {
+    .nameProduct {
+        width: 180px;
+        margin-left: 10px;
+    }
 }
 
