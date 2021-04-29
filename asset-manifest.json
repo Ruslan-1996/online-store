@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/online-store/static/css/main.c8af4ada.chunk.css",
+    "main.css": "/online-store/static/css/main.6d6b47e8.chunk.css",
     "main.js": "/online-store/static/js/main.4b682d2f.chunk.js",
     "main.js.map": "/online-store/static/js/main.4b682d2f.chunk.js.map",
     "runtime-main.js": "/online-store/static/js/runtime-main.11ff2a12.js",
@@ -12,7 +12,7 @@
     "static/js/3.3a1a7a09.chunk.js.map": "/online-store/static/js/3.3a1a7a09.chunk.js.map",
     "index.html": "/online-store/index.html",
     "static/css/2.03710b91.chunk.css.map": "/online-store/static/css/2.03710b91.chunk.css.map",
-    "static/css/main.c8af4ada.chunk.css.map": "/online-store/static/css/main.c8af4ada.chunk.css.map",
+    "static/css/main.6d6b47e8.chunk.css.map": "/online-store/static/css/main.6d6b47e8.chunk.css.map",
     "static/js/2.46455012.chunk.js.LICENSE.txt": "/online-store/static/js/2.46455012.chunk.js.LICENSE.txt",
     "static/media/Subscribe.module.css": "/online-store/static/media/bac.d36e2937.d36e2937.png",
     "static/media/sliderLogo.5d2fd271.jpg": "/online-store/static/media/sliderLogo.5d2fd271.jpg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.11ff2a12.js",
     "static/css/2.03710b91.chunk.css",
     "static/js/2.46455012.chunk.js",
-    "static/css/main.c8af4ada.chunk.css",
+    "static/css/main.6d6b47e8.chunk.css",
     "static/js/main.4b682d2f.chunk.js"
   ]
 }
