@@ -5,6 +5,11 @@
     margin: 0 auto;
 }
 
+.preloader {
+    padding-left: calc(50vw - 240px);
+    padding-top: calc(50vh - 35px);
+}
+
 .pageWrapper {
     min-height: calc(100vh - 465px);
 }
@@ -23,6 +28,13 @@
     .app.active {
         position: fixed;
         overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .preloader {
+        padding-top: calc(50vh - 25px);
+        padding-left: calc(50vw - 150px);
     }
 }
 

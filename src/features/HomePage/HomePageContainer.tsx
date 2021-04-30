@@ -1,5 +1,5 @@
 import React, {ReactComponentElement, useEffect} from 'react';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import HomePage from './HomePage';
 import {compose} from "redux";
 import {connect} from "react-redux";
@@ -23,21 +23,19 @@ const HomePageContainer: React.FC<OwnType & MapDispatchPropsType & MapStateProps
 
     useEffect(() => {
         let categoryURL = props.match.params.categories
-        if(props.categories.some(category => category.name.toLowerCase() === categoryURL)) {
+        if (props.categories.some(category => category.name.toLowerCase() === categoryURL) || categoryURL === 'home') {
             let idCategories = props.categories.filter(id => id.name === categoryURL.toUpperCase())
 
             if (categoryURL === 'home') {
-                idCategories = props.categories
+                props.setProducts(props.categories[0].id)
+            } else {
+                props.setProducts(idCategories[0].id)
             }
-            props.setProducts(idCategories[0].id)
         }
     })
 
     return (
-
-
-
-       <HomePage/>
+        <HomePage/>
     );
 }
 

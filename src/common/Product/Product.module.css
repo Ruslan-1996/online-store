@@ -56,6 +56,12 @@
     color: #3CB878;
 }
 
+.nameProduct {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .price {
     color: green;
 }
@@ -89,7 +95,7 @@
 @media screen and (max-width: 769px){
 
     .wrapper {
-        height: 367px;
+        height: 370px;
         width: 200px;
         margin: 20px 10px 20px 10px;
         font-size: 13px;

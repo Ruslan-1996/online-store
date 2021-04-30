@@ -4,6 +4,7 @@ import {BaseThunkType} from "./store";
 const UPDATE_NAME_EMAIL = 'online-store/home-page/UPDATE_NAME_EMAIL';
 const SET_ASSESSMENT = 'online-store/home-page/SET_ASSESSMENT';
 const SET_PRODUCTS_SUCCESS_TYPE = 'online-store/home-page/SET_PRODUCTS_SUCCESS_TYPE'
+const TOGGLE_PRELOADER = 'online-store/home-page/TOGGLE_PRELOADER'
 
 export type ProductType = {
     id: number,
@@ -16,9 +17,9 @@ export type ProductType = {
 
 let initialState = {
     product: [
-        // {id: 1, name: 'Cruise Dual Analog', price: 250.00, assessment: 4},
-        // {id: 2, name: 'Crown Summit Backpack', cost: 250.00, assessment: 4},
-        // {id: 3, name: 'Joust Duffle Bag', cost: 250.00, assessment: 4},
+        // {id: 100, name: 'Cruise Dual Analog', price: 250.00, assessment: 4},
+        // {id: 200, name: 'Crown Summit Backpack', price: 250.00, assessment: 4},
+        // {id: 300, name: 'Joust Duffle Bag', price: 250.00, assessment: 4},
         // {id: 4, name: 'Voyage Yoga Bag', cost: 250.00, assessment: 4},
         // {id: 5, name: 'Compete Track Tote', cost: 250.00, assessment: 4},
         // {id: 6, name: 'Sprite Yoga Companion Kit', cost: 250.00, assessment: 4},
@@ -31,6 +32,7 @@ let initialState = {
         // {id: 3, name: 'Joust Duffle Bag', price: 250.00, assessment: 4},
     ] as Array<ProductType>,
     nameEmail: '',
+    isPreloader: false,
 }
 
 // initialState.bestProduct[0].size = '300Х450'
@@ -58,13 +60,18 @@ const homePageReducer = (state = initialState, action: ActionType): InitialState
                 product: [...action.products],
                 bestProduct: [action.products[0], action.products[1], action.products[2]]
             }
+        case TOGGLE_PRELOADER:
+            return {
+                ...state,
+                isPreloader: action.preloader
+            }
         default:
             return state;
     }
 }
 
 
-type ActionType = OnNameEmailActionCreatorType | SetAssessmentType | SetProductsSuccessType
+type ActionType = OnNameEmailActionCreatorType | SetAssessmentType | SetProductsSuccessType | SetPreloaderToggleType
 
 type ThunkType = BaseThunkType<ActionType>
 
@@ -96,6 +103,17 @@ export const setAssessment = (assessment: number, id: number): SetAssessmentType
     }
 }
 
+type SetPreloaderToggleType = {
+    type: typeof TOGGLE_PRELOADER
+    preloader: boolean
+}
+
+export const setPreloaderToggle = (preloader: boolean): SetPreloaderToggleType => ({
+    type: TOGGLE_PRELOADER,
+    preloader
+})
+
+
 type SetProductsSuccessType = {
     type: typeof SET_PRODUCTS_SUCCESS_TYPE
     products: Array<ProductType>
@@ -110,8 +128,10 @@ const setProductsSuccess = (products: Array<ProductType>): SetProductsSuccessTyp
 
 export const setProducts = (categories: number): ThunkType => {
     return async (dispatch) => {
+        dispatch(setPreloaderToggle(true))
         const response = await homePageAPI.products(categories)
         dispatch(setProductsSuccess(response))
+        dispatch(setPreloaderToggle(false))
     }
 }
 

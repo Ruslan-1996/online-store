@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import s from './App.module.css'
 import Footer from "./features/Footer/Footer";
-import HomePage from "./features/HomePage/HomePage";
 import {Redirect, Route} from "react-router-dom";
 import ShopCart from "./features/ShopCart/ShopCart";
 import HeaderContainer from "./features/Header/HeaderContainer";
@@ -36,7 +35,9 @@ class AppContainer extends React.Component<PropsType, StateType> {
 
     render() {
         if (!this.props.inizializedAppBoolean) {
-            return <Preloader/>
+            return <div className={s.preloader}>
+                <Preloader/>
+            </div>
         }
 
         return (
@@ -44,10 +45,10 @@ class AppContainer extends React.Component<PropsType, StateType> {
                 <div className={s.pageWrapper}>
                     <HeaderContainer setIsActiveBurger={this.setIsActiveBurger} isActiveBurger={this.state.isActiveBurger}/>
                     <div className={s.content}>
-                        {/*<Route exact path='/' render={() => <Redirect to={'/women'}/>}/>*/}
+                        <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>
                         {/*<Route exact path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
-                        <Route path='/cart' render={() => <ShopCart/>}/>
                         <Route path='/:categories?' render={() => <HomePageContainer/>}/>
+                        <Route path='/cart' render={() => <ShopCart/>}/>
                     </div>
                 </div>
                 <Footer/>

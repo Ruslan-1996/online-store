@@ -54,8 +54,8 @@ let Header: React.FC<PropsType> = (props) => {
                     <span className={s.textGreen}>RENOSHOP</span>BEE
                 </NavLink>
                 <div className={`${s.navMenu} ${props.isActiveBurger && s.isActive}`}>
-                    {/*<NavLink to='/home' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => props.setIsActiveBurger(false)}>HOME</NavLink>*/}
+                    <NavLink to='/home' className={s.navItem} activeClassName={s.active}
+                             onClick={() => props.setIsActiveBurger(false)}>HOME</NavLink>
                     {/*<NavLink to='/women' className={s.navItem} activeClassName={s.active}*/}
                     {/*         onClick={() => setIsActiveBurger(true)}>WOMEN</NavLink>*/}
                     {/*<NavLink to='/men' className={s.navItem} activeClassName={s.active}*/}

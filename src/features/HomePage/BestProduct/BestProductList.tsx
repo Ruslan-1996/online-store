@@ -17,6 +17,7 @@ const BestProductList = () => {
                     </span>
                 </div>
                 <div  className={s.products}>
+
                     <BestProductContainer/>
                 </div>
             </div>

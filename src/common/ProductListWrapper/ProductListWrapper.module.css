@@ -10,6 +10,12 @@
     width: 330px;
 }
 
+.preloader {
+    height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (max-width: 1501px) {
     .wrapper {
@@ -23,7 +29,12 @@
     }
 
     .wrapper:after {
-        content: '';
         width: 220px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .preloader {
+        height: 410px;
     }
 }

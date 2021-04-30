@@ -1,12 +1,11 @@
 .wrapper {
     width: 100%;
-    min-height: 715px;
     display: flex;
     align-items: center;
 }
 
 .wrapperContent {
-    margin-left: 70px;
+    margin: 70px 0 20px 0;
     float: left;
     width: 1375px;
     display: flex;
@@ -43,9 +42,7 @@
 @media screen and (max-width: 1500px){
 
     .wrapper {
-        margin-top: 50px;
         width: 100%;
-        min-height: 755px;
         display: flex;
         align-items: center;
     }
@@ -68,7 +65,7 @@
         width: 80%;
         display: flex;
         align-items: center;
-        /*height: 120px;*/
+        height: 120px;
     }
 
     .products {
@@ -88,6 +85,11 @@
     .products {
         width: 80%;
     }
+
+    .wrapperContent {
+        margin: 20px 0 10px 0;
+    }
+
 }
 
 @media screen and (max-width: 832px){
