@@ -7,15 +7,16 @@ type PropsType = {
     product: Array<ProductType>
     setAssessment: (assessment: number, id: number) => void
     onProductDelete: (id: number) => void
-    onChange: (id: number, name: string, cost: number) => void
+    onChange: (id: number, name: string, cost: number, image: string) => void
     productInCart: Array<number>
 }
 
 const ProductListWrapper: React.FC<PropsType> = (props) => {
     let products = props.product.map(product => <Product id={product.id} name={product.name}
-                                                         cost={product.cost} key={product.id}
+                                                         price={product.price} key={product.id}
                                                          onChange={props.onChange}
                                                          size={product.size}
+                                                         image={product.image}
                                                          onProductDelete={props.onProductDelete}
                                                          productInCart = {props.productInCart}
                                                          assessment={product.assessment}

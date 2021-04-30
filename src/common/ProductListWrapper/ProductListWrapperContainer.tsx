@@ -6,7 +6,7 @@ import {AppStateType} from "../../store/store";
 import ProductListWrapper from "./ProductListWrapper";
 
 type PropsType = {
-    addProductInCart: (id: number, name: string, cost: number) => void
+    addProductInCart: (id: number, name: string, cost: number, image: string) => void
     setAssessment: (assessment: number, id: number) => void
     onProductDelete: (id: number) => void
     productInCart: Array<number>
@@ -15,8 +15,8 @@ type PropsType = {
 
 class ProductListWrapperContainer extends React.Component<PropsType> {
 
-    onChange = (id:number, name: string, cost: number) => {
-        this.props.addProductInCart(id, name, cost)
+    onChange = (id:number, name: string, cost: number, image: string) => {
+        this.props.addProductInCart(id, name, cost, image)
     }
 
     render() {
@@ -25,7 +25,7 @@ class ProductListWrapperContainer extends React.Component<PropsType> {
 }
 
 type MapDispatchPropsType = {
-    addProductInCart: (id: number, name: string, cost: number) => void
+    addProductInCart: (id: number, name: string, cost: number, image: string) => void
     setAssessment: (assessment: number, id: number) => void
     onProductDelete: (id: number) => void
 }

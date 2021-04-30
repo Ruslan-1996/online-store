@@ -5,6 +5,7 @@ import img_2 from "../../../static/brand-logo-1a.png"
 import img_3 from "../../../static/brand-logo-2a.png"
 import img_4 from "../../../static/brand-logo-3a.png"
 import {Field, Form} from "react-final-form";
+import {homePageAPI} from "../../../api/homePageAPI";
 
 type PropsType = {
     onNameEmailActionCreator: (text: string) => void
@@ -14,8 +15,14 @@ export type FieldValidatorType = (value: string) => string | undefined
 
 let Subscribe: React.FC<PropsType> = (props) => {
 
-    let onNameEmail = (value:any) => {
+    type ValueType = {
+        emailInput: string
+    }
+
+    let onNameEmail = (value: ValueType) => {
         props.onNameEmailActionCreator(value.emailInput)
+        homePageAPI.clients(value.emailInput)
+        console.log(value.emailInput)
     }
 
     let emailValidate:FieldValidatorType = (value) => {

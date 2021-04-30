@@ -18,7 +18,6 @@ let mapStateToProps = (state: AppStateType): MapStatePropsType => {
     }
 }
 
-
 const SubscribeContainer = connect<MapStatePropsType, MapDispatchPropsType, {}, AppStateType>
                             (mapStateToProps, {onNameEmailActionCreator})(Subscribe)
 

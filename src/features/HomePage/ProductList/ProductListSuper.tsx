@@ -2,8 +2,6 @@ import s from "./ProductListSuper.module.css";
 import React from "react";
 import ProductListContainer from "./ProductListContainer";
 
-
-
 const ProductListSuper = () => {
 
     return (

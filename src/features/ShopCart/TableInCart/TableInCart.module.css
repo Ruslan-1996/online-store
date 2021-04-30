@@ -109,6 +109,10 @@
     .table {
         display: none;
     }
+
+    .endOfTable {
+        border: 1px solid #b4b4b5;
+    }
 }
 
 @media screen and (max-width: 376px) {

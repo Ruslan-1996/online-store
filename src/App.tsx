@@ -9,6 +9,7 @@ import {connect} from "react-redux";
 import {AppStateType} from "./store/store";
 import {initializedAPP} from "./store/appReducer";
 import Preloader from "./common/Preloader/Preloader";
+import HomePageContainer from './features/HomePage/HomePageContainer';
 
 type PropsType = {
     inizializedAppBoolean: boolean
@@ -43,14 +44,10 @@ class AppContainer extends React.Component<PropsType, StateType> {
                 <div className={s.pageWrapper}>
                     <HeaderContainer setIsActiveBurger={this.setIsActiveBurger} isActiveBurger={this.state.isActiveBurger}/>
                     <div className={s.content}>
-                        <Route path='/' render={() => <Redirect to={'/home'}/>}/>
-                        <Route path='/home' render={() => <HomePage/>}/>
-                        <Route path='/men' render={() => <HomePage/>}/>
-                        <Route path='/women' render={() => <HomePage/>}/>
-                        <Route path='/kids' render={() => <HomePage/>}/>
-                        <Route path='/jewellery' render={() => <HomePage/>}/>
-                        <Route path='/accessories' render={() => <HomePage/>}/>
+                        {/*<Route exact path='/' render={() => <Redirect to={'/women'}/>}/>*/}
+                        {/*<Route exact path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
                         <Route path='/cart' render={() => <ShopCart/>}/>
+                        <Route path='/:categories?' render={() => <HomePageContainer/>}/>
                     </div>
                 </div>
                 <Footer/>

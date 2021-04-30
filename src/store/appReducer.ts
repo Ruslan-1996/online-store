@@ -1,4 +1,5 @@
 import {getCategories} from "./headerReducer";
+import {setProducts} from "./homePageReducer";
 
 const INITIALIZED_SUCCESS = 'online-store/appReducer/INITIALIZED_SUCCESS'
 
@@ -36,8 +37,9 @@ export const initializedSuccess = (): InitializedSuccessType => {
 export const initializedAPP = () => {
     return (dispatch: any) =>
     {
-        const Promise = dispatch(getCategories())
-        Promise.then(()=> {
+        const promiseCategories = dispatch(getCategories())
+        // const promiseProducts = dispatch(setProducts(1))
+        Promise.all([promiseCategories]).then(()=> {
             dispatch(initializedSuccess())
         })
     }

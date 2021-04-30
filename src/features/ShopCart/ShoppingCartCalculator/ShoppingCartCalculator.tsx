@@ -14,11 +14,11 @@ const ShoppingCartCalculator: React.FC<PropsType> = (props) => {
             <div className={s.blockCalculation}>
                 <div className={s.item}>
                     <span>Subtotal</span>
-                    <span>${props.subtotal}</span>
+                    <span>${props.subtotal.toFixed(2)}</span>
                 </div>
                 <div className={s.item}>
                     <span>Coupon</span>
-                    <span>-${props.couponDiscount}</span>
+                    <span>-${props.couponDiscount.toFixed(2)}</span>
                 </div>
                 <div className={s.item}>
                     <span>Shipping</span>
@@ -28,7 +28,7 @@ const ShoppingCartCalculator: React.FC<PropsType> = (props) => {
             <div className={s.blockTotal}>
                 <div className={s.item}>
                 <span>Total</span>
-                <span>${props.totalShopCart}</span>
+                <span>${props.totalShopCart.toFixed(2)}</span>
                 </div>
             </div>
             <button className={s.button}>PROCEED TO CHECKOUT</button>

@@ -15,6 +15,7 @@ const TableInCart: React.FC<PropsType> = (props) => {
                                                                         cost={product.cost} key={product.id}
                                                                         totalCost={product.totalCost}
                                                                         value={product.value} id={product.id}
+                                                                        image={product.image}
                                                                         size={product.size}
                                                                         onChangeInput={props.onChangeInput}
                                                                         onProductDelete={props.onProductDelete}/>)

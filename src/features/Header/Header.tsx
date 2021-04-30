@@ -15,11 +15,11 @@ type PropsType = {
 
 let Header: React.FC<PropsType> = (props) => {
 
-    const categories = props.categories.map(categorie => <NavLink to={`/${categorie.name.toLowerCase()}`}
+    const categories = props.categories.map(category => <NavLink to={`/${category.name.toLowerCase()}`}
                                                                   className={s.navItem}
                                                                   activeClassName={s.active}
-                                                                  key={categorie.id}
-                                                                  onClick={() => props.setIsActiveBurger(false)}>{categorie.name}</NavLink>)
+                                                                  key={category.id}
+                                                                  onClick={() => props.setIsActiveBurger(false)}>{category.name}</NavLink>)
 
     // const [isActiveBurger, setIsActiveBurger] = useState(false)
 
@@ -54,8 +54,8 @@ let Header: React.FC<PropsType> = (props) => {
                     <span className={s.textGreen}>RENOSHOP</span>BEE
                 </NavLink>
                 <div className={`${s.navMenu} ${props.isActiveBurger && s.isActive}`}>
-                    <NavLink to='/home' className={s.navItem} activeClassName={s.active}
-                             onClick={() => props.setIsActiveBurger(false)}>HOME</NavLink>
+                    {/*<NavLink to='/home' className={s.navItem} activeClassName={s.active}*/}
+                    {/*         onClick={() => props.setIsActiveBurger(false)}>HOME</NavLink>*/}
                     {/*<NavLink to='/women' className={s.navItem} activeClassName={s.active}*/}
                     {/*         onClick={() => setIsActiveBurger(true)}>WOMEN</NavLink>*/}
                     {/*<NavLink to='/men' className={s.navItem} activeClassName={s.active}*/}

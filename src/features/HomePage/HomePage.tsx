@@ -5,7 +5,7 @@ import Categories from "./Categories/Categories";
 import SubscribeContainer from "./Subscribe/SubscribeContainer";
 import BestProductList from "./BestProduct/BestProductList";
 import ProductListSuper from "./ProductList/ProductListSuper";
-
+import { withRouter } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -19,6 +19,7 @@ const HomePage = () => {
         </div>
     );
 }
+
 
 export default HomePage;
 

@@ -4,16 +4,18 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faRetweet, faShoppingCart, faStar} from "@fortawesome/free-solid-svg-icons";
 import {StarRegular} from "../FontAweasomeIconRegular/FontAwesomeIconRegular";
 import {ProductType} from "../../store/homePageReducer";
+import Image from "../../static/sliderLogo.jpg";
 
 
 type PropsType = {
     setAssessment: (assessment: number, id: number) => void
     onProductDelete: (id: number) => void
-    onChange: (id: number, name: string, cost: number) => void
+    onChange: (id: number, name: string, cost: number, image: string) => void
     productInCart: Array<number>
     id: number
     name: string
-    cost: number
+    price: number
+    image: string
     assessment: number
     size: string | undefined
 }
@@ -21,7 +23,7 @@ type PropsType = {
 const Product: React.FC<PropsType> = (props) => {
 
     let addProductInCart = () => {
-        props.onChange(props.id, props.name, props.cost)
+        props.onChange(props.id, props.name, props.price, props.image)
     }
 
     let deleteProduct = () => {
@@ -40,7 +42,12 @@ const Product: React.FC<PropsType> = (props) => {
 
     return (
         <div className={s.wrapper}>
-            <div className={s.image}>
+            <div className={s.image} style={{
+                backgroundImage: `url(${props.image})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center top"
+            }}>
                     {!props.productInCart.some(product => product === props.id) ?
                         <div className={s.addHover} onClick={addProductInCart}>
                             <FontAwesomeIcon icon={faShoppingCart} className={s.iconHover}/>
@@ -61,7 +68,7 @@ const Product: React.FC<PropsType> = (props) => {
             <span className={s.size}>{props.size}</span>
             <span className={s.nameProduct}>{props.name}</span>
             <span className={s.price}>
-                ${props.cost}
+                ${props.price.toFixed(2)}
             </span>
             <div className={s.stars}>
                 {starActive.map(star => <span onClick={() => props.setAssessment(star, props.id)}>

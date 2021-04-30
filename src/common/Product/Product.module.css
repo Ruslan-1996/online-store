@@ -17,6 +17,7 @@
     background-color: #121212;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .addHover{
@@ -38,6 +39,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #3cb878;
+    box-sizing: border-box;
 }
 
 .image:hover .addHover:hover{

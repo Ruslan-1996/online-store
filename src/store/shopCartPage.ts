@@ -11,6 +11,7 @@ export type CartProductType = {
     name: string
     cost: number
     totalCost: number
+    image: string
     value: string
     size?: string
 }
@@ -74,6 +75,7 @@ const shopCartPageReducer = (state = initialState, action: ActionType): InitialS
                     id: action.id,
                     name: action.name,
                     cost: action.cost,
+                    image: action.image,
                     totalCost: action.cost,
                     value: '1',
                     size: '80х100'
@@ -83,6 +85,7 @@ const shopCartPageReducer = (state = initialState, action: ActionType): InitialS
                     id: action.id,
                     name: action.name,
                     cost: action.cost,
+                    image: action.image,
                     totalCost: action.cost,
                     value: '1',
                 }]
@@ -186,12 +189,13 @@ type AddProductInCartType = {
     id: number
     name: string
     cost: number
+    image: string
 }
 
-export const addProductInCart = (id: number, name: string, cost: number): AddProductInCartType => {
+export const addProductInCart = (id: number, name: string, cost: number, image: string): AddProductInCartType => {
     return {
         type: ADD_PRODUCT_IN_CART,
-        id, name, cost
+        id, name, cost, image
     }
 }
 
