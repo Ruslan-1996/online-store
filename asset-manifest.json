@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/online-store/static/css/main.ddf45295.chunk.css",
-    "main.js": "/online-store/static/js/main.22b9e997.chunk.js",
-    "main.js.map": "/online-store/static/js/main.22b9e997.chunk.js.map",
-    "runtime-main.js": "/online-store/static/js/runtime-main.11ff2a12.js",
-    "runtime-main.js.map": "/online-store/static/js/runtime-main.11ff2a12.js.map",
+    "main.css": "/online-store/static/css/main.60630707.chunk.css",
+    "main.js": "/online-store/static/js/main.dcb871fe.chunk.js",
+    "main.js.map": "/online-store/static/js/main.dcb871fe.chunk.js.map",
+    "runtime-main.js": "/online-store/static/js/runtime-main.8a4e7ea1.js",
+    "runtime-main.js.map": "/online-store/static/js/runtime-main.8a4e7ea1.js.map",
     "static/css/2.03710b91.chunk.css": "/online-store/static/css/2.03710b91.chunk.css",
-    "static/js/2.718c81fd.chunk.js": "/online-store/static/js/2.718c81fd.chunk.js",
-    "static/js/2.718c81fd.chunk.js.map": "/online-store/static/js/2.718c81fd.chunk.js.map",
-    "static/js/3.3a1a7a09.chunk.js": "/online-store/static/js/3.3a1a7a09.chunk.js",
-    "static/js/3.3a1a7a09.chunk.js.map": "/online-store/static/js/3.3a1a7a09.chunk.js.map",
+    "static/js/2.36180ce2.chunk.js": "/online-store/static/js/2.36180ce2.chunk.js",
+    "static/js/2.36180ce2.chunk.js.map": "/online-store/static/js/2.36180ce2.chunk.js.map",
+    "static/js/3.70b0589a.chunk.js": "/online-store/static/js/3.70b0589a.chunk.js",
+    "static/js/3.70b0589a.chunk.js.map": "/online-store/static/js/3.70b0589a.chunk.js.map",
     "index.html": "/online-store/index.html",
     "static/css/2.03710b91.chunk.css.map": "/online-store/static/css/2.03710b91.chunk.css.map",
-    "static/css/main.ddf45295.chunk.css.map": "/online-store/static/css/main.ddf45295.chunk.css.map",
-    "static/js/2.718c81fd.chunk.js.LICENSE.txt": "/online-store/static/js/2.718c81fd.chunk.js.LICENSE.txt",
+    "static/css/main.60630707.chunk.css.map": "/online-store/static/css/main.60630707.chunk.css.map",
+    "static/js/2.36180ce2.chunk.js.LICENSE.txt": "/online-store/static/js/2.36180ce2.chunk.js.LICENSE.txt",
     "static/media/Subscribe.module.css": "/online-store/static/media/bac.d36e2937.d36e2937.png",
     "static/media/sliderLogo.5d2fd271.jpg": "/online-store/static/media/sliderLogo.5d2fd271.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.11ff2a12.js",
+    "static/js/runtime-main.8a4e7ea1.js",
     "static/css/2.03710b91.chunk.css",
-    "static/js/2.718c81fd.chunk.js",
-    "static/css/main.ddf45295.chunk.css",
-    "static/js/main.22b9e997.chunk.js"
+    "static/js/2.36180ce2.chunk.js",
+    "static/css/main.60630707.chunk.css",
+    "static/js/main.dcb871fe.chunk.js"
   ]
 }
