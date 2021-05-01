@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from './App.module.css'
 import Footer from "./features/Footer/Footer";
-import {Redirect, Route} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import ShopCart from "./features/ShopCart/ShopCart";
 import HeaderContainer from "./features/Header/HeaderContainer";
 import {connect} from "react-redux";
@@ -43,12 +43,17 @@ class AppContainer extends React.Component<PropsType, StateType> {
         return (
             <div className={`${s.app} ${this.state.isActiveBurger && s.active}`}>
                 <div className={s.pageWrapper}>
-                    <HeaderContainer setIsActiveBurger={this.setIsActiveBurger} isActiveBurger={this.state.isActiveBurger}/>
+                    <HeaderContainer setIsActiveBurger={this.setIsActiveBurger}
+                                     isActiveBurger={this.state.isActiveBurger}/>
                     <div className={s.content}>
-                        <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>
-                        {/*<Route exact path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
-                        <Route path='/:categories?' render={() => <HomePageContainer/>}/>
-                        <Route path='/cart' render={() => <ShopCart/>}/>
+                        <Switch>
+                            {/*<Route  path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
+                            <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>
+                            <Route path='/cart' render={() => <ShopCart/>}/>
+                            <Route path='/:categories?' render={() => <HomePageContainer/>}/>
+
+                            <Route path='*' render={() => <div>404</div>}/>
+                        </Switch>
                     </div>
                 </div>
                 <Footer/>

@@ -1,4 +1,4 @@
-import React, {ReactComponentElement, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import HomePage from './HomePage';
 import {compose} from "redux";
@@ -21,9 +21,12 @@ type MapStatePropsType = {
 
 const HomePageContainer: React.FC<OwnType & MapDispatchPropsType & MapStatePropsType> = (props) => {
 
+    const [pageFound, setPageFound] = useState(true)
+
     useEffect(() => {
         let categoryURL = props.match.params.categories
         if (props.categories.some(category => category.name.toLowerCase() === categoryURL) || categoryURL === 'home') {
+            setPageFound(true)
             let idCategories = props.categories.filter(id => id.name === categoryURL.toUpperCase())
 
             if (categoryURL === 'home') {
@@ -31,12 +34,12 @@ const HomePageContainer: React.FC<OwnType & MapDispatchPropsType & MapStateProps
             } else {
                 props.setProducts(idCategories[0].id)
             }
+        } else {
+            setPageFound(false)
         }
     })
 
-    return (
-        <HomePage/>
-    );
+    return <HomePage pageFound={pageFound}/>
 }
 
 const MapStateToProps = (state: AppStateType): MapStatePropsType => {
