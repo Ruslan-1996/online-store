@@ -45,7 +45,7 @@ class AppContainer extends React.Component<PropsType, StateType> {
                 <div className={s.pageWrapper}>
                     <HeaderContainer setIsActiveBurger={this.setIsActiveBurger}
                                      isActiveBurger={this.state.isActiveBurger}/>
-                    <div className={s.content}>
+                    <div className={`${s.content}`}>
                         <Switch>
                             {/*<Route  path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
                             <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>

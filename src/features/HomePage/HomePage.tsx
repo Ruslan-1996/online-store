@@ -15,7 +15,7 @@ type PropsType = {
 
 const HomePage: React.FC<PropsType> = React.memo(({pageFound}) => {
     return (
-        <div className={s.wrapper}>
+        <div>
             {pageFound ? (
                     <div>
                         <Slider/>
@@ -25,7 +25,9 @@ const HomePage: React.FC<PropsType> = React.memo(({pageFound}) => {
                         <ProductListSuper/>
                         <SubscribeContainer/>
                     </div>) :
-                <Error404/>}
+                <div className={s.wrapper}>
+                    <Error404/>
+                </div>}
         </div>
     );
 })

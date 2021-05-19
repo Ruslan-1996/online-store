@@ -193,7 +193,7 @@
         position: fixed;
         right: -100%;
         top: 0;
-        width: 100%;
+        width: 300px;
         height: calc(100% - 98px);
         margin: 99px 0 0 0;
         background-color: white;
@@ -305,6 +305,7 @@
     }
 
     .navMenu {
+        width: 100%;
         margin-top: 50px;
     }
 
