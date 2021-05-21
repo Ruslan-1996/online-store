@@ -1,3 +1,7 @@
+@value colors: "./../../../../styles/colors.css";
+
+@value lightGreyColor, greyColor, blackColor, darkWhiteColor, whiteColor from colors;
+
 .wrapper {
     width: 100%;
     display: grid;
@@ -12,19 +16,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #B4B4B5;
-    border-left: 1px solid #B4B4B5;
+    border-bottom: 1px solid lightGreyColor;
+    border-left: 1px solid lightGreyColor;
 }
 
 .products {
     grid-area: products;
 }
 
+.productWrapper {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    display: flex;
+    align-items: center;
+}
+
 .image {
     height: 100px;
     width: 80px;
-    background-color: black;
-    color: #646464;
+    background-color: blackColor;
+    color: greyColor;
     display: flex;
     border: none;
     justify-content: center;
@@ -34,7 +45,6 @@
 
 .nameProduct {
     margin-left: 30px;
-    width: 260px;
 }
 
 .color {
@@ -51,7 +61,7 @@
     height: 35px;
     width: 50px;
     outline: none !important;
-    border: 1px solid #B4B4B5;
+    border: 1px solid lightGreyColor;
 }
 
 .price {
@@ -60,7 +70,7 @@
 
 .total {
     grid-area: total;
-    border-right: 1px solid #B4B4B5;
+    border-right: 1px solid lightGreyColor;
     justify-content: center;
 }
 
@@ -73,12 +83,12 @@
 .delete {
     height: 20px;
     width: 20px;
-    border: 2px solid black;
+    border: 2px solid blackColor;
     border-radius: 50%;
     padding: 0px;
     font-size: 16px;
     font-weight: 900;
-    background-color: white;
+    background-color: whiteColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,14 +97,13 @@
 }
 
 .delete:active {
-    background-color: #eeeeee;
+    background-color: darkWhiteColor;
 }
 
 @media screen and (max-width: 1500px) {
 
     .nameProduct {
         margin-left: 20px;
-        width: 200px;
     }
 
 }
@@ -113,9 +122,13 @@
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 2;
-        border: 1px solid #B4B4B5;
+        border: 1px solid lightGreyColor;
         border-bottom: none;
         height: 150px;
+    }
+
+    .productWrapper {
+        margin: 0 20% 0 20%;
     }
 
     .color {
@@ -124,7 +137,7 @@
         grid-row-start: 2;
         grid-row-end: 3;
         border: none;
-        border-left: 1px solid #b4b4b5;
+        border-left: 1px solid lightGreyColor;
     }
 
     .quantity {
@@ -133,7 +146,7 @@
         grid-row-start: 2;
         grid-row-end: 3;
         border: none;
-        border-right: 1px solid #B4B4B5;
+        border-right: 1px solid lightGreyColor;
     }
 
     .price {
@@ -142,7 +155,7 @@
         grid-row-start: 3;
         grid-row-end: 4;
         border: none;
-        border-left: 1px solid #b4b4b5;
+        border-left: 1px solid lightGreyColor;
     }
 
     .total {
@@ -151,7 +164,7 @@
         grid-row-start: 3;
         grid-row-end: 4;
         border: none;
-        border-right: 1px solid #B4B4B5;
+        border-right: 1px solid lightGreyColor;
     }
 
     .totalPrice {
@@ -161,8 +174,12 @@
 }
 
 @media screen and (max-width: 469px) {
+
+    .productWrapper {
+        margin: 0 0% 0 15%;
+    }
+
     .nameProduct {
-        width: 180px;
         margin-left: 10px;
     }
 }

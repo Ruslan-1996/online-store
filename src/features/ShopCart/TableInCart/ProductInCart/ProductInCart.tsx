@@ -14,16 +14,18 @@ type PropsType = {
 }
 
 const ProductInCart: React.FC<PropsType> = (props) => {
-     return (
+    return (
         <div className={s.wrapper}>
             <div className={`${s.products} ${s.item}`}>
-                <div className={s.image} style={{
-                    backgroundImage: `url(${props.image})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center"
-                }}>{!props.image && props.size}</div>
-                <div className={s.nameProduct}>{props.name}</div>
+                <div className={s.productWrapper}>
+                    <div className={s.image} style={{
+                        backgroundImage: `url(${props.image})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center"
+                    }}>{!props.image && props.size}</div>
+                    <div className={s.nameProduct}>{props.name}</div>
+                </div>
             </div>
             <div className={`${s.color} ${s.item}`}>
                 <div>Size: XL</div>
