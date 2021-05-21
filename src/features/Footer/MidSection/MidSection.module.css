@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreenColor, blackColor,whiteColor from colors;
+
 .wrapper {
     height: 345px;
     width: 1180px;
@@ -17,7 +21,7 @@
 }
 
 .title, .navItem {
-    color: black;
+    color: blackColor;
     font-size: 14px;
 }
 
@@ -32,7 +36,7 @@
 }
 
 .navItem:hover {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 .icon {
@@ -40,7 +44,7 @@
 }
 
 .mail {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 @media screen and (max-width: 1500px){
@@ -57,7 +61,7 @@
 
     .carouselWrapper {
         display: block;
-        background-color: #ffffff;
+        background-color: whiteColor;
         width: 100%;
         text-align: center;
     }

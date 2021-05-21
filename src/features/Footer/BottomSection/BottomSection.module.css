@@ -1,12 +1,16 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, blackColor from colors;
+
 .wrapper {
     height: 60px;
     width: 100%;
     margin: 0 auto;
-    background-color: black;
+    background-color: blackColor;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #B4B4B5;
+    color: lightGreyColor;
 }
 .container{
     width: 1180px;
@@ -31,7 +35,7 @@
 }
 
 .button:hover {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 @media screen and (max-width: 1500px){

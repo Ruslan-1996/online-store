@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreenColor, hoverLightGreenColor, whiteColor, darkWhiteColor, blackColor, errorColor from colors;
+
 .wrapper {
     height: 250px;
     width: 100%;
@@ -18,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: whiteColor;
 }
 
 .promocodeTitle {
@@ -47,27 +51,27 @@
     width: 400px;
     margin-right: 10px;
     padding: 0 25px 0 25px;
-    color: black;
+    color: blackColor;
 }
 
 .error {
-    color: red;
+    color: errorColor;
     margin-top: 10px;
 
 }
 
 .button {
     width: 200px;
-    background-color: #3CB878;
-    color: white;
+    background-color: lightGreenColor;
+    color: whiteColor;
 }
 
 .button:active {
-    background-color: #34a369;
+    background-color: hoverLightGreenColor;
 }
 
 .clients {
-    background-color: #F5F6F9;
+    background-color: darkWhiteColor;
     width: 50%;
     height: 100%;
     display: flex;

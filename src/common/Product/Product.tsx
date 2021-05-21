@@ -3,8 +3,6 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faRetweet, faShoppingCart, faStar} from "@fortawesome/free-solid-svg-icons";
 import {StarRegular} from "../FontAweasomeIconRegular/FontAwesomeIconRegular";
-import {ProductType} from "../../store/homePageReducer";
-import Image from "../../static/sliderLogo.jpg";
 
 
 type PropsType = {

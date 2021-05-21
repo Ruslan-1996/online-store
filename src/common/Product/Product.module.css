@@ -1,3 +1,7 @@
+@value colors: "./../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, greyColor, blackColor, whiteColor, greenColor, starsColor from colors;
+
 .wrapper {
     height: 550px;
     width: 300px;
@@ -14,7 +18,7 @@
     display: flex;
     height: 450px;
     width: 100%;
-    background-color: #121212;
+    background-color: blackColor;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -35,25 +39,25 @@
     height: 40px;
     width: 40px;
     margin: 10px 10px 0 0;
-    background-color: #3CB878;
+    background-color: lightGreenColor;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #3cb878;
+    border: 1px solid lightGreenColor;
     box-sizing: border-box;
 }
 
 .image:hover .addHover:hover{
-    background-color: white;
+    background-color: whiteColor;
 }
 
 .iconHover {
     font-size: 18px;
-    color: white;
+    color: whiteColor;
 }
 
 .image:hover .addHover:hover .iconHover{
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 .nameProduct {
@@ -63,30 +67,30 @@
 }
 
 .price {
-    color: green;
+    color: greenColor;
 }
 
 .iconStar {
-    color: orange;
+    color: starsColor;
     margin-right: 2px;
     cursor: pointer;
 }
 
 .image:hover .addHover.active {
-    background-color: white;
+    background-color: whiteColor;
 }
 
 .check {
     display: inline-block;
     width: 12px;
     height: 20px;
-    border: solid #3CB878;
+    border: solid lightGreenColor;
     border-width: 0 5px 5px 0;
     transform: rotate( 45deg);
 }
 
 .size {
-    color: #646464;
+    color: greyColor;
     position: absolute;
     top: 220px;
     left: 130px;

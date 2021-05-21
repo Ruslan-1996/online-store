@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, hoverLightGreenColor, greyColor, whiteColor from colors;
+
 .wrapper {
     width: 570px;
     margin: 0 auto;
@@ -12,7 +16,7 @@
 .blockCalculation {
     height: 180px;
     width: 100%;
-    border: 1px solid #B4B4B5;
+    border: 1px solid lightGreyColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +26,7 @@
 .blockTotal {
     height: 91px;
     width: 100%;
-    border: 1px solid #B4B4B5;
+    border: 1px solid lightGreyColor;
     border-top: none;
     display: flex;
     justify-content: center;
@@ -44,14 +48,14 @@
     width: 250px;
     height: 50px;
     border: none;
-    color: white;
-    background-color: #3CB878;
+    color: whiteColor;
+    background-color: lightGreenColor;
     font-weight: 700;
     outline: none !important;
 }
 
 .button:active {
-    background-color: #34a369;
+    background-color: hoverLightGreenColor;
 }
 
 @media screen and (max-width: 1500px) {

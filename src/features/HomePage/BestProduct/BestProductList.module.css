@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreenColor from colors;
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -34,7 +38,7 @@
 .subtitle {
     font-family: "Times New Roman", sans-serif;
     font-style: italic;
-    color: #3cb878;
+    color: lightGreenColor;
     font-size: 12px;
     margin-bottom: 40px;
 }

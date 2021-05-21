@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value colorCategoriesCenter, colorCategories, greyColor, whiteColor from colors;
+
 .wrapper {
     width: 100%;
     height: 500px;
@@ -8,7 +12,7 @@
 .categorie {
     width: 500px;
     height: 100%;
-    background-color: #2E3348;
+    background-color: colorCategories;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,17 +22,17 @@
 .size {
     position: absolute;
     bottom: 430px;
-    color: #34394F;
+    color: colorCategoriesCenter;
     font-weight: 700;
 }
 
 .center {
-    background-color: #34394F;
+    background-color: colorCategoriesCenter;
 }
 
 .square{
     position: absolute;
-    border: 1px solid white;
+    border: 1px solid whiteColor;
     width: 255px;
     height: 255px;
     transform: rotate(45deg);
@@ -36,14 +40,14 @@
 
 .smallSquare {
     position: absolute;
-    border: 1px solid white;
+    border: 1px solid whiteColor;
     width: 245px;
     height: 245px;
     transform: rotate(45deg);
 }
 
 .feature, .title {
-    color: white;
+    color: whiteColor;
     margin: 2px 0 2px 0;
     font-family: 'Arial', sans-serif;
 }
@@ -72,7 +76,7 @@
 @media screen and (max-width: 1201px){
     .square{
         position: absolute;
-        border: 1px solid white;
+        border: 1px solid whiteColor;
         width: 210px;
         height: 210px;
         transform: rotate(45deg);
@@ -80,7 +84,7 @@
 
     .smallSquare {
         position: absolute;
-        border: 1px solid white;
+        border: 1px solid whiteColor;
         width: 200px;
         height: 200px;
         transform: rotate(45deg);

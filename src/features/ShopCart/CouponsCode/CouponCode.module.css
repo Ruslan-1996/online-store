@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, hoverLightGreenColor, greyColor, whiteColor from colors;
+
 .wrapper {
     width: 570px;
     margin: 0 auto;
@@ -14,7 +18,7 @@ p{
 }
 
 .text {
-    color: #646464;
+    color: greyColor;
     margin-bottom: 14px;
 }
 
@@ -26,7 +30,7 @@ p{
 
 .input {
     width: calc(100% - 130px);
-    border: 1px solid #B4B4B5;
+    border: 1px solid lightGreyColor;
     border-right: none;
     padding: 0 22px 0 22px;
 }
@@ -34,12 +38,12 @@ p{
 .button {
     width: 130px;
     border: none;
-    color: white;
-    background-color: #3CB878;
+    color: whiteColor;
+    background-color: lightGreenColor;
 }
 
 .button:active {
-    background-color: #34a369;
+    background-color: hoverLightGreenColor;
 }
 
 @media screen and (max-width: 1500px) {

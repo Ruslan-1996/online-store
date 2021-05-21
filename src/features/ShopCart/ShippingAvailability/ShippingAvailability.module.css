@@ -1,3 +1,7 @@
+@value colors: "./../../../styles/colors.css";
+
+@value darkWhiteColor, lightGreyColor, greyColor, blackColor, whiteColor from colors;
+
 .wrapper {
     width: 570px;
     margin: 0 auto;
@@ -10,7 +14,7 @@
 }
 
 .text {
-    color: #646464;
+    color: greyColor;
     margin: 0 0 14px 0;
 }
 
@@ -21,7 +25,7 @@
 
 .input {
     width: 100%;
-    border: 1px solid #B4B4B5;
+    border: 1px solid lightGreyColor;
     padding: 0 22px 0 22px;
     margin-bottom: 20px;
     height: 45px;
@@ -30,14 +34,14 @@
 .button {
     width: 150px;
     height: 35px;
-    border: 1px solid #B4B4B5;
-    color: black;
-    background-color: white;
+    border: 1px solid lightGreyColor;
+    color: blackColor;
+    background-color: whiteColor;
     font-weight: 700;
 }
 
 .button:active {
-    background-color: #B4B4B5;
+    background-color: darkWhiteColor;
 }
 
 @media screen and (max-width: 1500px) {

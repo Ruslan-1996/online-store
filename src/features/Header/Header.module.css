@@ -1,16 +1,20 @@
+@value colors: "./../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, blackColor, greyColor, whiteColor, colorFacebook, colorTwitter, colorInstagram, colorLinkedin, colorBehance from colors;
+
 .header {
     width: 100%;
     box-shadow: 0 3px 5px rgba(122, 122, 122, 0.1);
 }
 
 .textGreen {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 .topHeader {
     width: 100%;
     height: 62px;
-    background-color: #121212;
+    background-color: blackColor;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,18 +30,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-right: 1px solid #646464;
+    border-right: 1px solid greyColor;
     height: 14px;
 }
 
 .phoneNumber {
     margin: 0 25px 0 25px;
-    color: white;
+    color: whiteColor;
     font-size: 14px;
 }
 
 .iconInHeader {
-    color: white;
+    color: whiteColor;
     height: 14px;
     width: 14px;
 }
@@ -48,7 +52,7 @@
 
 .nameMail {
     margin-left: 25px;
-    color: white;
+    color: whiteColor;
     font-size: 14px;
 }
 
@@ -64,23 +68,23 @@
 }
 
 .iconFacebook:hover {
-    color: #4867AA;
+    color: colorFacebook;
 }
 
 .iconTwitter:hover {
-    color: #23A1F9;
+    color: colorTwitter;
 }
 
 .iconInstagram:hover {
-    color: #912EB9;
+    color: colorInstagram;
 }
 
 .iconLinkedin:hover {
-    color: #2977C9;
+    color: colorLinkedin;
 }
 
 .iconBehance:hover {
-    color: #1666F7;
+    color: colorBehance;
 }
 
 .bottomHeader {
@@ -89,11 +93,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: whiteColor;
 }
 
 .siteLogo {
-    color: black;
+    color: blackColor;
     margin-left: 50px;
     font-size: 17px;
     font-weight: 700;
@@ -109,17 +113,17 @@
 }
 
 .navItem {
-    color: black;
+    color: blackColor;
 }
 
 .siteLogo:hover,
 .navItem:hover {
-    color: black;
+    color: blackColor;
     text-decoration: none;
 }
 
 .navItem.active {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 .navRight {
@@ -131,7 +135,7 @@
 }
 
 .shoppingCart {
-    color: #646464;
+    color: greyColor;
     height: 14px;
     width: 14px;
     position: relative;
@@ -139,7 +143,7 @@
 }
 
 .shoppingCart:hover {
-    color: #3CB878;
+    color: lightGreenColor;
 }
 
 .numberOrder {
@@ -148,8 +152,8 @@
     align-items: center;
     position: relative;
     font-size: 10px;
-    color: white;
-    background-color: #3CB878;
+    color: whiteColor;
+    background-color: lightGreenColor;
     bottom: 20px;
     left: 10px;
     height: 15px;
@@ -159,11 +163,11 @@
 }
 
 .numberOrder:hover {
-    background-color: #646464;
+    background-color: greyColor;
 }
 
 .iconSearch {
-    color: #646464;
+    color: greyColor;
 }
 
 .burger {
@@ -171,7 +175,7 @@
     position: relative;
     width: 16px;
     height: 14px;
-    color: #646464;
+    color: greyColor;
 }
 
 @media screen and (max-width: 1025px) {
@@ -196,7 +200,7 @@
         width: 300px;
         height: calc(100% - 98px);
         margin: 99px 0 0 0;
-        background-color: white;
+        background-color: whiteColor;
         transition: 0.3s;
         overflow: auto;
         z-index: 1;
@@ -205,7 +209,7 @@
         justify-content: start;
         align-items: flex-start;
         font-size: 20px;
-        border-top: 2px solid black;
+        border-top: 2px solid blackColor;
     }
 
     .navItem {
@@ -225,7 +229,7 @@
         display: block;
         width: 16px;
         height: 16px;
-        color: #646464;
+        color: greyColor;
     }
 
 
@@ -246,7 +250,7 @@
     .burger:before,
     .burger:after {
         content: '';
-        background-color: #646464;
+        background-color: greyColor;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -257,7 +261,7 @@
 
     .burger span {
         position: absolute;
-        background-color: #646464;
+        background-color: greyColor;
         left: 0;
         width: 100%;
         height: 2px;
