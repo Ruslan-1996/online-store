@@ -1,0 +1,32 @@
+.wrapper {
+    width: 100%;
+    padding-bottom: 170px;
+}
+
+.article {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+}
+
+@media screen and (max-width: 1500px){
+    .article {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .article {
+        flex-direction: column;
+    }
+
+    .couponsCode {
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding-bottom: 30px;
+    }
+}

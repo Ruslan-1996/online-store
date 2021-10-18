@@ -1,0 +1,128 @@
+@value colors: "./../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, greyColor, blackColor, whiteColor, greenColor, starsColor from colors;
+
+.wrapper {
+    height: 550px;
+    width: 300px;
+    margin: 30px 15px 30px 15px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    height: 450px;
+    width: 100%;
+    background-color: blackColor;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.addHover{
+    display: none;
+    cursor: pointer;
+}
+
+.image:hover {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.image:hover .addHover {
+    height: 40px;
+    width: 40px;
+    margin: 10px 10px 0 0;
+    background-color: lightGreenColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightGreenColor;
+    box-sizing: border-box;
+}
+
+.image:hover .addHover:hover{
+    background-color: whiteColor;
+}
+
+.iconHover {
+    font-size: 18px;
+    color: whiteColor;
+}
+
+.image:hover .addHover:hover .iconHover{
+    color: lightGreenColor;
+}
+
+.nameProduct {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    color: greenColor;
+}
+
+.iconStar {
+    color: starsColor;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.image:hover .addHover.active {
+    background-color: whiteColor;
+}
+
+.check {
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    border: solid lightGreenColor;
+    border-width: 0 5px 5px 0;
+    transform: rotate( 45deg);
+}
+
+.size {
+    color: greyColor;
+    position: absolute;
+    top: 220px;
+    left: 130px;
+}
+
+@media screen and (max-width: 769px){
+
+    .wrapper {
+        height: 370px;
+        width: 200px;
+        margin: 20px 10px 20px 10px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .image:hover .addHover {
+        height: 30px;
+        width: 30px;
+        margin: 8px 8px 0 0;
+    }
+
+    .iconHover {
+        font-size: 14px;
+    }
+
+    .check {
+        width: 9px;
+        height: 15px;
+        border-width: 0 4px 4px 0;
+    }
+
+}

@@ -1,0 +1,105 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, hoverLightGreenColor, greyColor, whiteColor from colors;
+
+.wrapper {
+    width: 570px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.title {
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+p{
+    margin: 0;
+}
+
+.text {
+    color: greyColor;
+    margin-bottom: 14px;
+}
+
+.input,
+.button {
+    outline: none !important;
+    height: 45px;
+}
+
+.input {
+    width: calc(100% - 130px);
+    border: 1px solid lightGreyColor;
+    border-right: none;
+    padding: 0 22px 0 22px;
+}
+
+.button {
+    width: 130px;
+    border: none;
+    color: whiteColor;
+    background-color: lightGreenColor;
+}
+
+.button:active {
+    background-color: hoverLightGreenColor;
+}
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        width: 45vw;
+    }
+
+    .input{
+        width: 37vw;
+    }
+
+    .button {
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    .wrapper {
+        width: 90vw;
+    }
+
+    .input{
+        width: 70vw;
+    }
+
+    .button {
+        width: 20vw;
+    }
+
+    .title {
+        margin: 35px 0 0 0;
+    }
+
+    .text {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .wrapper {
+        width: 90vw;
+    }
+
+    .input{
+        width: 70vw;
+    }
+
+    .button {
+        width: 20vw;
+    }
+
+    .title {
+        margin: 35px 0 0 0;
+    }
+
+    .text {
+        margin-bottom: 5px;
+    }
+}

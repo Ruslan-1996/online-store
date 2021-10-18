@@ -1,0 +1,319 @@
+@value colors: "./../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, blackColor, greyColor, whiteColor, colorFacebook, colorTwitter, colorInstagram, colorLinkedin, colorBehance from colors;
+
+.header {
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(122, 122, 122, 0.1);
+}
+
+.textGreen {
+    color: lightGreenColor;
+}
+
+.topHeader {
+    width: 100%;
+    height: 62px;
+    background-color: blackColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid greyColor;
+    height: 14px;
+}
+
+.phoneNumber {
+    margin: 0 25px 0 25px;
+    color: whiteColor;
+    font-size: 14px;
+}
+
+.iconInHeader {
+    color: whiteColor;
+    height: 14px;
+    width: 14px;
+}
+
+.mail {
+    margin: 0 0 0 40px;
+}
+
+.nameMail {
+    margin-left: 25px;
+    color: whiteColor;
+    font-size: 14px;
+}
+
+.networks {
+    margin-right: 50px;
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconNetwork {
+    cursor: pointer;
+}
+
+.iconFacebook:hover {
+    color: colorFacebook;
+}
+
+.iconTwitter:hover {
+    color: colorTwitter;
+}
+
+.iconInstagram:hover {
+    color: colorInstagram;
+}
+
+.iconLinkedin:hover {
+    color: colorLinkedin;
+}
+
+.iconBehance:hover {
+    color: colorBehance;
+}
+
+.bottomHeader {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whiteColor;
+}
+
+.siteLogo {
+    color: blackColor;
+    margin-left: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navMenu {
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.navItem {
+    color: blackColor;
+}
+
+.siteLogo:hover,
+.navItem:hover {
+    color: blackColor;
+    text-decoration: none;
+}
+
+.navItem.active {
+    color: lightGreenColor;
+}
+
+.navRight {
+    margin-right: 50px;
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shoppingCart {
+    color: greyColor;
+    height: 14px;
+    width: 14px;
+    position: relative;
+    top: 7px;
+}
+
+.shoppingCart:hover {
+    color: lightGreenColor;
+}
+
+.numberOrder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 10px;
+    color: whiteColor;
+    background-color: lightGreenColor;
+    bottom: 20px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    text-decoration: none;
+}
+
+.numberOrder:hover {
+    background-color: greyColor;
+}
+
+.iconSearch {
+    color: greyColor;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    width: 16px;
+    height: 14px;
+    color: greyColor;
+}
+
+@media screen and (max-width: 1025px) {
+    .header {
+        position: fixed;
+        z-index: 2;
+    }
+
+    .topHeader {
+        height: 50px;
+    }
+
+    .bottomHeader {
+        height: 50px;
+    }
+
+    .navMenu {
+        padding: 30px 0 30px 0;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 300px;
+        height: calc(100% - 98px);
+        margin: 99px 0 0 0;
+        background-color: whiteColor;
+        transition: 0.3s;
+        overflow: auto;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        font-size: 20px;
+        border-top: 2px solid blackColor;
+    }
+
+    .navItem {
+        margin: 10px 0 10px 50px;
+    }
+
+    .navMenu.isActive {
+        right: -0%;
+        top: 0;
+    }
+
+    .navRight {
+        width: 100px;
+    }
+
+    .burger {
+        display: block;
+        width: 16px;
+        height: 16px;
+        color: greyColor;
+    }
+
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 7px;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+    }
+
+    .burger.active span {
+        transform: scale(0);
+    }
+
+    .burger:before,
+    .burger:after {
+        content: '';
+        background-color: greyColor;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        z-index: 3;
+        transition: 0.3s;
+    }
+
+    .burger span {
+        position: absolute;
+        background-color: greyColor;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 7px;
+        z-index: 3;
+    }
+
+    .burger:before {
+        top: 0;
+    }
+
+    .burger:after {
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .navRight {
+        margin-right: 5vw;
+    }
+
+    .siteLogo {
+        margin-left: 5vw;
+    }
+
+    .networks {
+        display: none;
+    }
+
+    .contacts {
+        width: 100%;
+        padding: 0 50px 0 50px;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width: 481px) {
+
+    .topHeader {
+        display: none;
+    }
+
+    .navMenu {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .navMenu {
+        height: calc(100% - 48px);
+    }
+}

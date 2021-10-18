@@ -1,0 +1,23 @@
+.numberError,
+.textError {
+    font-size: 75px;
+    color: #3cb878;
+    width: 670px;
+    text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+    .numberError,
+    .textError {
+        font-size: 40px;
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .numberError,
+    .textError {
+        font-size: 25px;
+        width: 230px;
+    }
+}

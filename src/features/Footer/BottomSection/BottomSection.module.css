@@ -1,0 +1,65 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, lightGreenColor, blackColor from colors;
+
+.wrapper {
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: blackColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightGreyColor;
+}
+.container{
+    width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.buttons {
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: lightGreenColor;
+}
+
+@media screen and (max-width: 1500px){
+    .container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .wrapper {
+        height: 80px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text {
+        width: 300px;
+    }
+
+    .buttons {
+        width: 300px;
+        justify-content: space-between;
+    }
+}

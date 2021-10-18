@@ -1,0 +1,75 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreenColor, blackColor,whiteColor from colors;
+
+.wrapper {
+    height: 345px;
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carouselWrapper {
+    display: none;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.title, .navItem {
+    color: blackColor;
+    font-size: 14px;
+}
+
+.title {
+    margin: 48px 0 40px 0;
+    font-weight: 700;
+}
+
+.navItem {
+    margin-bottom: 20px;
+    text-decoration: none !important;
+}
+
+.navItem:hover {
+    color: lightGreenColor;
+}
+
+.icon {
+    margin-right: 7px;
+}
+
+.mail {
+    color: lightGreenColor;
+}
+
+@media screen and (max-width: 1500px){
+    .wrapper {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 769px){
+
+    .wrapper{
+        display: none;
+    }
+
+    .carouselWrapper {
+        display: block;
+        background-color: whiteColor;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carouselBlock {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        margin-bottom: 20px;
+    }
+}

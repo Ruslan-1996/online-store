@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper:after {
+    content: '';
+    width: 330px;
+}
+
+.preloader {
+    height: 610px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1501px) {
+    .wrapper {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .wrapper {
+        justify-content: center;
+    }
+
+    .wrapper:after {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .preloader {
+        height: 410px;
+    }
+}

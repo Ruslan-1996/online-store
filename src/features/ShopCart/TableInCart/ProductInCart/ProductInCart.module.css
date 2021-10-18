@@ -1,0 +1,186 @@
+@value colors: "./../../../../styles/colors.css";
+
+@value lightGreyColor, greyColor, blackColor, darkWhiteColor, whiteColor from colors;
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+  'products color quantity price total';
+    grid-template-columns: 41fr 19fr 17fr 18fr 19fr;
+}
+
+
+.item {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightGreyColor;
+    border-left: 1px solid lightGreyColor;
+}
+
+.products {
+    grid-area: products;
+}
+
+.productWrapper {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    height: 100px;
+    width: 80px;
+    background-color: blackColor;
+    color: greyColor;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nameProduct {
+    margin-left: 30px;
+}
+
+.color {
+    grid-area: color;
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity {
+    grid-area: quantity;
+}
+
+.input {
+    height: 35px;
+    width: 50px;
+    outline: none !important;
+    border: 1px solid lightGreyColor;
+}
+
+.price {
+    grid-area: price;
+}
+
+.total {
+    grid-area: total;
+    border-right: 1px solid lightGreyColor;
+    justify-content: center;
+}
+
+.totalPrice {
+    width: 110px;
+    overflow: auto;
+}
+
+
+.delete {
+    height: 20px;
+    width: 20px;
+    border: 2px solid blackColor;
+    border-radius: 50%;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: whiteColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    outline: none !important;
+}
+
+.delete:active {
+    background-color: darkWhiteColor;
+}
+
+@media screen and (max-width: 1500px) {
+
+    .nameProduct {
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item {
+        height: 64px;
+    }
+
+    .products {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border: 1px solid lightGreyColor;
+        border-bottom: none;
+        height: 150px;
+    }
+
+    .productWrapper {
+        margin: 0 20% 0 20%;
+    }
+
+    .color {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: none;
+        border-left: 1px solid lightGreyColor;
+    }
+
+    .quantity {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: none;
+        border-right: 1px solid lightGreyColor;
+    }
+
+    .price {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: none;
+        border-left: 1px solid lightGreyColor;
+    }
+
+    .total {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: none;
+        border-right: 1px solid lightGreyColor;
+    }
+
+    .totalPrice {
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width: 469px) {
+
+    .productWrapper {
+        margin: 0 0% 0 15%;
+    }
+
+    .nameProduct {
+        margin-left: 10px;
+    }
+}
+

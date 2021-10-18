@@ -1,0 +1,143 @@
+@value colors: "./../../../styles/colors.css";
+
+@value colorCategoriesCenter, colorCategories, greyColor, whiteColor from colors;
+
+.wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    position: relative;
+}
+
+.categorie {
+    width: 500px;
+    height: 100%;
+    background-color: colorCategories;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.size {
+    position: absolute;
+    bottom: 430px;
+    color: colorCategoriesCenter;
+    font-weight: 700;
+}
+
+.center {
+    background-color: colorCategoriesCenter;
+}
+
+.square{
+    position: absolute;
+    border: 1px solid whiteColor;
+    width: 255px;
+    height: 255px;
+    transform: rotate(45deg);
+}
+
+.smallSquare {
+    position: absolute;
+    border: 1px solid whiteColor;
+    width: 245px;
+    height: 245px;
+    transform: rotate(45deg);
+}
+
+.feature, .title {
+    color: whiteColor;
+    margin: 2px 0 2px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    font-size: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: -1.1px;
+}
+
+.titleCenter {
+    font-size: 55px;
+    height: 55px;
+    letter-spacing: 1px;
+}
+
+.feature {
+    font-size: 15px;
+    letter-spacing: 4.5px;
+}
+
+
+@media screen and (max-width: 1201px){
+    .square{
+        position: absolute;
+        border: 1px solid whiteColor;
+        width: 210px;
+        height: 210px;
+        transform: rotate(45deg);
+    }
+
+    .smallSquare {
+        position: absolute;
+        border: 1px solid whiteColor;
+        width: 200px;
+        height: 200px;
+        transform: rotate(45deg);
+    }
+
+    .title {
+        font-size: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        letter-spacing: -1.1px;
+    }
+
+    .titleCenter {
+        font-size: 45px;
+        height: 45px;
+        letter-spacing: 1px;
+    }
+
+    .feature {
+        font-size: 10px;
+        letter-spacing: 4.5px;
+    }
+}
+
+@media screen and (max-width: 951px){
+
+    .wrapper {
+        height: 200px;
+    }
+
+    .square{
+        display: none;
+    }
+
+    .smallSquare {
+        display: none;
+    }
+
+    .size {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 769px){
+    .wrapper {
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .categorie {
+        width: 100%;
+    }
+}

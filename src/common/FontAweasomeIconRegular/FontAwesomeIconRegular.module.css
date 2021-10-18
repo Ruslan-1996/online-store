@@ -1,0 +1,7 @@
+@value colors: "./../../styles/colors.css";
+
+@value starsColor from colors;
+
+.iconStar {
+    color: starsColor;
+}

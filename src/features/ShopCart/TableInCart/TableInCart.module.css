@@ -1,0 +1,127 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreyColor, darkWhiteColor, lightGreenColor, hoverLightGreenColor, blackColor, whiteColor from colors;
+
+.wrapper {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.cartNull {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+}
+
+.table {
+    margin-top: 45px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+  'products color quantity price total';
+    grid-template-columns: 41fr 19fr 17fr 18fr 19fr;
+}
+
+.title {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid lightGreyColor;
+    border-bottom: 1px solid lightGreyColor;
+    border-left: 1px solid lightGreyColor;
+    box-sizing: border-box;
+}
+
+.products {
+    grid-area: products;
+}
+
+.color {
+    grid-area: color;
+}
+
+.quantity {
+    grid-area: quantity;
+}
+
+.price {
+    grid-area: price;
+}
+
+.total {
+    grid-area: total;
+    border-right: 1px solid lightGreyColor;
+}
+
+.endOfTable {
+    border-bottom: 1px solid lightGreyColor;
+    border-left: 1px solid lightGreyColor;
+    border-right: 1px solid lightGreyColor;
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button {
+    margin-right: 25px;
+    font-size: 10px;
+    height: 35px;
+    padding: 0 19px 0 19px;
+    border: 1px solid lightGreyColor;
+    box-sizing: border-box;
+    outline: none !important;
+    font-weight: 700;
+}
+
+.continue {
+    background-color: lightGreenColor;
+    color: whiteColor;
+}
+
+.continue:active {
+    background-color: hoverLightGreenColor;
+}
+
+.updateCart {
+    background-color: whiteColor;
+    color: blackColor;
+}
+
+.updateCart:active {
+    background-color: darkWhiteColor;
+}
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .wrapper {
+        margin-top: 30px;
+    }
+
+    .table {
+        display: none;
+    }
+
+    .endOfTable {
+        border: 1px solid lightGreyColor;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .button {
+        padding: 0 10px 0 10px;
+    }
+}

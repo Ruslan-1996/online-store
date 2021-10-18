@@ -1,0 +1,119 @@
+@value colors: "./../../../styles/colors.css";
+
+@value lightGreenColor from colors;
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapperContent {
+    margin: 70px 0 20px 0;
+    float: left;
+    width: 1375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article {
+    width: 345px;
+    height: 170px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products {
+    width: 1030px;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.subtitle {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+    color: lightGreenColor;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1500px){
+
+    .wrapperContent {
+        margin-left: 0;
+        width: 100%;
+        justify-content: start;
+        flex-direction: column;
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    .article {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        height: 120px;
+    }
+
+    .products {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    .products {
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 1025px){
+
+    .products {
+        width: 80%;
+    }
+
+    .wrapperContent {
+        margin: 20px 0 10px 0;
+    }
+
+}
+
+@media screen and (max-width: 832px){
+
+    .products {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    .products {
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 731px) {
+
+    .products {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 581px) {
+
+    .products {
+        width: 95%;
+    }
+
+}
