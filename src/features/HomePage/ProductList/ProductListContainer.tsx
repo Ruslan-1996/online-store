@@ -1,4 +1,3 @@
-import React from "react";
 import {connect} from "react-redux";
 import {productInCart} from "../../../store/shopPageSelectors";
 import ProductListWrapperContainer from "../../../common/ProductListWrapper/ProductListWrapperContainer";
@@ -16,7 +15,6 @@ let mapStateToProps = (state: AppStateType): MapStatePropsType => {
         productInCart: productInCart(state),
     }
 }
-
 
 const ProductContainer = connect<MapStatePropsType, {}, {}, AppStateType>(mapStateToProps)(ProductListWrapperContainer)
 

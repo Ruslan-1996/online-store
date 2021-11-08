@@ -8,7 +8,11 @@ import {AppStateType} from "../../store/store";
 import {CategoriesType} from "../../store/headerReducer";
 
 type OwnType = {
-    match: any
+    match: {
+        params: {
+            categories: string
+        }
+    }
 }
 
 type MapDispatchPropsType = {
@@ -20,24 +24,25 @@ type MapStatePropsType = {
 }
 
 const HomePageContainer: React.FC<OwnType & MapDispatchPropsType & MapStatePropsType> = (props) => {
-
+    const {categories, setProducts}= props
     const [pageFound, setPageFound] = useState(true)
+    let categoryURL = props.match.params.categories
 
     useEffect(() => {
-        let categoryURL = props.match.params.categories
-        if (props.categories.some(category => category.name.toLowerCase() === categoryURL) || categoryURL === 'home') {
+        if (categories.some(category => category.name.toLowerCase() === categoryURL) || categoryURL === 'home') {
             setPageFound(true)
-            let idCategories = props.categories.filter(id => id.name === categoryURL.toUpperCase())
+            let idCategories = categories.filter(id => id.name === categoryURL.toUpperCase())
 
             if (categoryURL === 'home') {
-                props.setProducts(props.categories[0].id)
+                setProducts(categories[0].id)
             } else {
-                props.setProducts(idCategories[0].id)
+                setProducts(idCategories[0].id)
             }
         } else {
             setPageFound(false)
         }
-    })
+        window.scrollTo(0,0)
+    }, [categoryURL, categories, setProducts])
 
     return <HomePage pageFound={pageFound}/>
 }

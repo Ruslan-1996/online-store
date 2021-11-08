@@ -27,14 +27,14 @@
     .wrapper {
         justify-content: center;
     }
-
-    .wrapper:after {
-        width: 220px;
-    }
 }
 
 @media screen and (max-width: 769px) {
     .preloader {
         height: 410px;
+    }
+
+    .wrapper:after {
+        width: 220px;
     }
 }

@@ -1,5 +1,4 @@
 import {instance} from "./api";
-import axios from "axios";
 import {ProductType} from "../store/homePageReducer";
 
 type ClientsType = {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './App.module.css'
 import Footer from "./features/Footer/Footer";
 import {Redirect, Route, Switch} from "react-router-dom";
@@ -24,15 +24,6 @@ class AppContainer extends React.Component<PropsType, StateType> {
         this.props.initializedAPP()
     }
 
-    state: StateType = {
-        isActiveBurger: false
-    }
-
-
-    setIsActiveBurger: (boolean: any) => void = (boolean) => {
-        this.setState({isActiveBurger: boolean});
-    }
-
     render() {
         if (!this.props.inizializedAppBoolean) {
             return <div className={s.preloader}>
@@ -41,17 +32,14 @@ class AppContainer extends React.Component<PropsType, StateType> {
         }
 
         return (
-            <div className={`${s.app} ${this.state.isActiveBurger && s.active}`}>
+            <div className={s.app}>
                 <div className={s.pageWrapper}>
-                    <HeaderContainer setIsActiveBurger={this.setIsActiveBurger}
-                                     isActiveBurger={this.state.isActiveBurger}/>
+                    <HeaderContainer />
                     <div className={`${s.content}`}>
                         <Switch>
-                            {/*<Route  path='/home' render={() => <Redirect to={'/women'}/>}/>*/}
                             <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>
                             <Route path='/cart' render={() => <ShopCart/>}/>
                             <Route path='/:categories?' render={() => <HomePageContainer/>}/>
-
                             <Route path='*' render={() => <div>404</div>}/>
                         </Switch>
                     </div>

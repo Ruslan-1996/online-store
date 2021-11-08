@@ -1,27 +1,39 @@
 import s from "./Header.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faPhoneAlt, faSearch, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import {faBehance, faFacebookF, faInstagram, faLinkedinIn, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {NavLink} from "react-router-dom";
 import {CategoriesType} from "../../store/headerReducer";
+import cn from 'classnames';
+
 
 type PropsType = {
     cartProductLength: number
     categories: Array<CategoriesType>
-    setIsActiveBurger: (boolean: boolean) => void
-    isActiveBurger: boolean
 }
 
 let Header: React.FC<PropsType> = (props) => {
+    const [isActiveBurger, setIsActiveBurger] = useState(false)
 
     const categories = props.categories.map(category => <NavLink to={`/${category.name.toLowerCase()}`}
                                                                   className={s.navItem}
                                                                   activeClassName={s.active}
                                                                   key={category.id}
-                                                                  onClick={() => props.setIsActiveBurger(false)}>{category.name}</NavLink>)
+                                                                  onClick={() => setIsActiveBurger(false)}>{category.name}</NavLink>)
 
-    // const [isActiveBurger, setIsActiveBurger] = useState(false)
+    useEffect(()=> {
+        if (isActiveBurger) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'visible'
+        }
+    }, [isActiveBurger])
+
+
+    const onBurgerMenu = () => {
+        setIsActiveBurger(prevState => !prevState)
+    }
 
     return (
         <header className={s.header}>
@@ -50,36 +62,26 @@ let Header: React.FC<PropsType> = (props) => {
                 </div>
             </div>
             <div className={s.bottomHeader}>
-                <NavLink to='/home' className={s.siteLogo} onClick={() => props.setIsActiveBurger(false)}>
+                <NavLink to='/home' className={s.siteLogo} onClick={() => setIsActiveBurger(false)}>
                     <span className={s.textGreen}>RENOSHOP</span>BEE
                 </NavLink>
-                <div className={`${s.navMenu} ${props.isActiveBurger && s.isActive}`}>
+                <div className={`${s.navMenu} ${isActiveBurger && s.isActive}`}>
                     <NavLink to='/home' className={s.navItem} activeClassName={s.active}
-                             onClick={() => props.setIsActiveBurger(false)}>HOME</NavLink>
-                    {/*<NavLink to='/women' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => setIsActiveBurger(true)}>WOMEN</NavLink>*/}
-                    {/*<NavLink to='/men' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => setIsActiveBurger(true)}>MEN</NavLink>*/}
-                    {/*<NavLink to='/kids' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => setIsActiveBurger(true)}>KIDS</NavLink>*/}
-                    {/*<NavLink to='/jewellery' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => setIsActiveBurger(true)}>JEWELLERY</NavLink>*/}
-                    {/*<NavLink to='/accessories' className={s.navItem} activeClassName={s.active}*/}
-                    {/*         onClick={() => setIsActiveBurger(true)}>ACCESSORIES</NavLink>*/}
+                             onClick={() => setIsActiveBurger(false)}>HOME</NavLink>
                     {categories}
                 </div>
                 <span className={s.navRight}>
-                     <NavLink to='/cart' onClick={() => props.setIsActiveBurger(false)}>
+                     <NavLink to='/cart' onClick={() => setIsActiveBurger(false)}>
                          <FontAwesomeIcon icon={faShoppingCart} className={s.shoppingCart}/>
                          <div className={s.numberOrder}>{props.cartProductLength}</div>
                      </NavLink>
                     <FontAwesomeIcon icon={faSearch} className={s.iconSearch}/>
-                    <div className={`${s.burger} ${props.isActiveBurger && s.active}`}
-                         onClick={() => props.setIsActiveBurger(!props.isActiveBurger)}>
+                    <div className={`${s.burger} ${isActiveBurger && s.active}`} onClick={onBurgerMenu}>
                         <span></span>
                     </div>
                 </span>
             </div>
+            <div className={cn(s.backdrop, {[s.active]: isActiveBurger})} onClick={onBurgerMenu}></div>
         </header>
     )
 }

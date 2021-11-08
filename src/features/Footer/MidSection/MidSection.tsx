@@ -8,9 +8,6 @@ import {Carousel} from "antd";
 
 import 'antd/dist/antd.css';
 
-
-
-
 let MidSectionOne = () => {
     return (
         <div className={s.block}>

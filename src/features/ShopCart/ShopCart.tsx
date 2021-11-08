@@ -6,7 +6,6 @@ import TableInCartContainer from "./TableInCart/TableInCartContainer";
 import ShippingAvailabilityContainer from "./ShippingAvailability/ShippingAvailabilityContainer";
 import ShoppingCartCalculatorContainer from "./ShoppingCartCalculator/ShoppingCartCalculatorContainer";
 
-
 const ShopCart = () => {
     return (
         <div className={s.wrapper}>

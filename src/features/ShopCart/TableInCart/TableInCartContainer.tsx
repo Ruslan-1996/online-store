@@ -1,4 +1,3 @@
-import React from "react";
 import {connect} from "react-redux";
 import TableInCart from "./TableInCart";
 import {CartProductType, onChangeInput, onProductDelete} from "../../../store/shopCartPage";

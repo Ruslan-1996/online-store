@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./Header";
 import {connect} from "react-redux";
 import {lengthCartProduct} from "../../store/shopPageSelectors";
@@ -16,7 +15,6 @@ const mapStateToProps = (state: AppStateType): MapStatePropsType => {
         categories: state.header.categories
     }
 }
-
 
 const HeaderContainer = connect<MapStatePropsType, {}, {}, AppStateType>(mapStateToProps)(Header)
 

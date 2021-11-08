@@ -22,13 +22,11 @@ const ProductListWrapper: React.FC<PropsType> = (props) => {
                                                          assessment={product.assessment}
                                                          setAssessment={props.setAssessment}/>);
 
-
     return (
         <div className={s.wrapper}>
                 {products}
         </div>
     )
 }
-
 
 export default ProductListWrapper;

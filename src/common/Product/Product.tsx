@@ -2,8 +2,7 @@ import s from "./Product.module.css";
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart, faRetweet, faShoppingCart, faStar} from "@fortawesome/free-solid-svg-icons";
-import {StarRegular} from "../FontAweasomeIconRegular/FontAwesomeIconRegular";
-
+import {faStar as faStarRegular} from "@fortawesome/free-regular-svg-icons";
 
 type PropsType = {
     setAssessment: (assessment: number, id: number) => void
@@ -69,12 +68,11 @@ const Product: React.FC<PropsType> = (props) => {
                 ${props.price.toFixed(2)}
             </span>
             <div className={s.stars}>
-                {starActive.map(star => <span onClick={() => props.setAssessment(star, props.id)}>
+                {starActive.map(star => <span onClick={() => props.setAssessment(star, props.id)} key={star}>
                     <FontAwesomeIcon icon={faStar} className={s.iconStar} key={star}/>
                 </span>)}
-                {starDontActive.map(star => <span onClick={() => props.setAssessment(star, props.id)}
-                                                  className={s.iconStar}>
-                    <StarRegular/>
+                {starDontActive.map(star => <span onClick={() => props.setAssessment(star, props.id)} key={star}>
+                    <FontAwesomeIcon icon={faStarRegular} className={s.iconStar} key={star}/>
                 </span>)}
             </div>
         </div>

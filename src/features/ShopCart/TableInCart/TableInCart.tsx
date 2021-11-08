@@ -3,7 +3,6 @@ import React from "react";
 import ProductInCart from "./ProductInCart/ProductInCart";
 import {CartProductType} from "../../../store/shopCartPage";
 
-
 type PropsType = {
     cartProduct: Array<CartProductType>
     onChangeInput: (value: string, id: number) => void

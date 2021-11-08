@@ -24,11 +24,6 @@
     .content {
         padding-top: 100px;
     }
-
-    .app.active {
-        position: fixed;
-        overflow: hidden;
-    }
 }
 
 @media screen and (max-width: 769px) {

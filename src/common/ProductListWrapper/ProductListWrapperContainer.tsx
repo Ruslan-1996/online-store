@@ -30,7 +30,6 @@ class ProductListWrapperContainer extends React.Component<PropsType> {
         this.props.addProductInCart(id, name, cost, image)
     }
 
-
     render() {
         if (this.props.isPreloader) {
             return (

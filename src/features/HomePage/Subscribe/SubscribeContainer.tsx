@@ -1,4 +1,3 @@
-import React from "react";
 import {onNameEmailActionCreator} from "../../../store/homePageReducer";
 import Subscribe from "./Subscribe";
 import {connect} from "react-redux";
