@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/online-store/static/css/main.d764d8b5.chunk.css",
-    "main.js": "/online-store/static/js/main.f4602247.chunk.js",
-    "main.js.map": "/online-store/static/js/main.f4602247.chunk.js.map",
-    "runtime-main.js": "/online-store/static/js/runtime-main.8a4e7ea1.js",
-    "runtime-main.js.map": "/online-store/static/js/runtime-main.8a4e7ea1.js.map",
+    "main.css": "/online-store/static/css/main.0cf88136.chunk.css",
+    "main.js": "/online-store/static/js/main.612d4f03.chunk.js",
+    "main.js.map": "/online-store/static/js/main.612d4f03.chunk.js.map",
+    "runtime-main.js": "/online-store/static/js/runtime-main.5c45c5e6.js",
+    "runtime-main.js.map": "/online-store/static/js/runtime-main.5c45c5e6.js.map",
     "static/css/2.03710b91.chunk.css": "/online-store/static/css/2.03710b91.chunk.css",
-    "static/js/2.24bf3fc9.chunk.js": "/online-store/static/js/2.24bf3fc9.chunk.js",
-    "static/js/2.24bf3fc9.chunk.js.map": "/online-store/static/js/2.24bf3fc9.chunk.js.map",
-    "static/js/3.70b0589a.chunk.js": "/online-store/static/js/3.70b0589a.chunk.js",
-    "static/js/3.70b0589a.chunk.js.map": "/online-store/static/js/3.70b0589a.chunk.js.map",
+    "static/js/2.859aabca.chunk.js": "/online-store/static/js/2.859aabca.chunk.js",
+    "static/js/2.859aabca.chunk.js.map": "/online-store/static/js/2.859aabca.chunk.js.map",
     "index.html": "/online-store/index.html",
     "static/css/2.03710b91.chunk.css.map": "/online-store/static/css/2.03710b91.chunk.css.map",
-    "static/css/main.d764d8b5.chunk.css.map": "/online-store/static/css/main.d764d8b5.chunk.css.map",
-    "static/js/2.24bf3fc9.chunk.js.LICENSE.txt": "/online-store/static/js/2.24bf3fc9.chunk.js.LICENSE.txt",
+    "static/css/main.0cf88136.chunk.css.map": "/online-store/static/css/main.0cf88136.chunk.css.map",
+    "static/js/2.859aabca.chunk.js.LICENSE.txt": "/online-store/static/js/2.859aabca.chunk.js.LICENSE.txt",
     "static/media/Subscribe.module.css": "/online-store/static/media/bac.d36e2937.d36e2937.png",
     "static/media/sliderLogo.5d2fd271.jpg": "/online-store/static/media/sliderLogo.5d2fd271.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a4e7ea1.js",
+    "static/js/runtime-main.5c45c5e6.js",
     "static/css/2.03710b91.chunk.css",
-    "static/js/2.24bf3fc9.chunk.js",
-    "static/css/main.d764d8b5.chunk.css",
-    "static/js/main.f4602247.chunk.js"
+    "static/js/2.859aabca.chunk.js",
+    "static/css/main.0cf88136.chunk.css",
+    "static/js/main.612d4f03.chunk.js"
   ]
 }
