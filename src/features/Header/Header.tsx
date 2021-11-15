@@ -29,6 +29,8 @@ const useWindowDimensions = () => {
 
 const Header: React.FC<PropsType> = (props) => {
   const [isActiveBurger, setIsActiveBurger] = useState(false)
+  const [topNav, setTopNav] = useState(0)
+  const [topBackDrop, setTopBackDrop] = useState(0)
   const width = useWindowDimensions()
 
   const categories = props.categories.map(category => <NavLink to={`/${category.name.toLowerCase()}`}
@@ -45,14 +47,41 @@ const Header: React.FC<PropsType> = (props) => {
     }
   }, [isActiveBurger])
 
+  const changeStyleNavMenu = () => {
+    const scrollY = Math.floor(window.scrollY)
+    if (scrollY < 50 && width > 481) {
+      setTopNav(scrollY)
+      setTopBackDrop(scrollY)
+    } else if (scrollY > 50 && width > 481) {
+      setTopNav(50)
+      setTopBackDrop(50)
+    } else if (width < 481) {
+      setTopNav(0)
+      setTopBackDrop(50)
+    }
+  }
+
   useEffect(() => {
-    if(width > 1025) {
+    if (width > 1025) {
       document.body.style.overflow = 'visible'
       setIsActiveBurger(false)
     }
+    if (isActiveBurger) {
+      changeStyleNavMenu()
+    }
   }, [width])
 
+
+  const styleNavMenu: { top: string, height: string } = {top: -topNav + 'px', height: `calc(100% - ${topNav}px)`}
+  const styleBackdrop: { top: string, height: string } = {
+    top: `calc(99px - ${topBackDrop}px)`,
+    height: `calc(100% - 50px + ${topBackDrop}px)`
+  }
+
   const onBurgerMenu = () => {
+    if (!isActiveBurger) {
+      changeStyleNavMenu()
+    }
     setIsActiveBurger(prevState => !prevState)
   }
 
@@ -86,7 +115,7 @@ const Header: React.FC<PropsType> = (props) => {
         <NavLink to='/home' className={s.siteLogo} onClick={() => setIsActiveBurger(false)}>
           <span className={s.textGreen}>RENOSHOP</span>BEE
         </NavLink>
-        <div className={`${s.navMenu} ${isActiveBurger && s.isActive}`}>
+        <div style={styleNavMenu} className={`${s.navMenu} ${isActiveBurger && s.isActive}`}>
           <NavLink to='/home' className={s.navItem} activeClassName={s.active}
                    onClick={() => setIsActiveBurger(false)}>HOME</NavLink>
           {categories}
@@ -102,7 +131,7 @@ const Header: React.FC<PropsType> = (props) => {
                     </div>
                 </span>
       </div>
-      <div className={cn(s.backdrop, {[s.active]: isActiveBurger})} onClick={onBurgerMenu}></div>
+      <div style={styleBackdrop} className={cn(s.backdrop, {[s.active]: isActiveBurger})} onClick={onBurgerMenu}></div>
     </header>
   )
 }
