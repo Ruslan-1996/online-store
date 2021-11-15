@@ -1,7 +1,7 @@
 import s from "./Header.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhoneAlt, faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { faBehance, faFacebookF, faInstagram, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from "react-router-dom";
 import { CategoriesType } from "../../store/headerReducer";
@@ -47,7 +47,7 @@ const Header: React.FC<PropsType> = (props) => {
     }
   }, [isActiveBurger])
 
-  const changeStyleNavMenu = () => {
+  const changeStyleNavMenu = useCallback (() => {
     const scrollY = Math.floor(window.scrollY)
     if (scrollY < 50 && width > 481) {
       setTopNav(scrollY)
@@ -59,7 +59,7 @@ const Header: React.FC<PropsType> = (props) => {
       setTopNav(0)
       setTopBackDrop(50)
     }
-  }
+  }, [width])
 
   useEffect(() => {
     if (width > 1025) {
@@ -69,7 +69,7 @@ const Header: React.FC<PropsType> = (props) => {
     if (isActiveBurger) {
       changeStyleNavMenu()
     }
-  }, [width])
+  }, [width, changeStyleNavMenu, isActiveBurger])
 
 
   const styleNavMenu: { top: string, height: string } = {top: -topNav + 'px', height: `calc(100% - ${topNav}px)`}
