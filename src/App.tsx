@@ -35,7 +35,7 @@ class AppContainer extends React.Component<PropsType, StateType> {
             <div className={s.app}>
                 <div className={s.pageWrapper}>
                     <HeaderContainer />
-                    <div className={`${s.content}`}>
+                    <div className={s.content}>
                         <Switch>
                             <Route exact path='/' render={() => <Redirect to={'/home'}/>}/>
                             <Route path='/cart' render={() => <ShopCart/>}/>

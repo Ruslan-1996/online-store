@@ -16,26 +16,11 @@ export type ProductType = {
 }
 
 let initialState = {
-    product: [
-        // {id: 100, name: 'Cruise Dual Analog', price: 250.00, assessment: 4},
-        // {id: 200, name: 'Crown Summit Backpack', price: 250.00, assessment: 4},
-        // {id: 300, name: 'Joust Duffle Bag', price: 250.00, assessment: 4},
-        // {id: 4, name: 'Voyage Yoga Bag', cost: 250.00, assessment: 4},
-        // {id: 5, name: 'Compete Track Tote', cost: 250.00, assessment: 4},
-        // {id: 6, name: 'Sprite Yoga Companion Kit', cost: 250.00, assessment: 4},
-        // {id: 7, name: 'Strive Shoulder Pack', cost: 250.00, assessment: 4},
-        // {id: 8, name: 'Impulse Duffle', cost: 250.00, assessment: 4},
-    ] as Array<ProductType>,
-    bestProduct: [
-        // {id: 1, name: 'Cruise Dual Analog', price: 250.00, assessment: 4},
-        // {id: 2, name: 'Crown Summit Backpack', price: 250.00, assessment: 4},
-        // {id: 3, name: 'Joust Duffle Bag', price: 250.00, assessment: 4},
-    ] as Array<ProductType>,
+    product: [] as Array<ProductType>,
+    bestProduct: [] as Array<ProductType>,
     nameEmail: '',
     isPreloader: false,
 }
-
-// initialState.bestProduct[0].size = '300Х450'
 
 type InitialStateType = typeof initialState
 
@@ -70,7 +55,6 @@ const homePageReducer = (state = initialState, action: ActionType): InitialState
     }
 }
 
-
 type ActionType = OnNameEmailActionCreatorType | SetAssessmentType | SetProductsSuccessType | SetPreloaderToggleType
 
 type ThunkType = BaseThunkType<ActionType>
@@ -80,14 +64,12 @@ type OnNameEmailActionCreatorType = {
     text: string
 }
 
-
 export const onNameEmailActionCreator = (text: string): OnNameEmailActionCreatorType => {
     return {
         type: UPDATE_NAME_EMAIL,
         text: text,
     }
 }
-
 
 type SetAssessmentType = {
     type: typeof SET_ASSESSMENT,
@@ -134,12 +116,5 @@ export const setProducts = (categories: number): ThunkType => {
         dispatch(setPreloaderToggle(false))
     }
 }
-
-// export const getEmail = (email: string) => {
-//     return {
-//         homePageAPI.clients(email)
-//     }
-// }
-
 
 export default homePageReducer;

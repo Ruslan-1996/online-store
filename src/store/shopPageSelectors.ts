@@ -40,4 +40,3 @@ export const totalShopCart = createSelector(subtotalShopCart, couponDiscount, (s
 export const productInCart = createSelector(productsInCartSelector, productInCart => {
        return productInCart.map(product => product.id)
 })
-

@@ -35,6 +35,12 @@
     }
 
     .wrapper:after {
+        width: 440px;
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .wrapper:after {
         width: 220px;
     }
 }

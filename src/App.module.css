@@ -20,23 +20,9 @@
     }
 }
 
-@media screen and (max-width: 1025px) {
-    .content {
-        padding-top: 100px;
-    }
-}
-
 @media screen and (max-width: 769px) {
     .preloader {
         padding-top: calc(50vh - 25px);
         padding-left: calc(50vw - 150px);
     }
-}
-
-@media screen and (max-width: 481px) {
-
-    .content {
-        padding-top: 50px;
-    }
-
 }

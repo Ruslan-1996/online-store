@@ -12,16 +12,11 @@ let rootReducers = combineReducers({
     header: headerReducer
 })
 
-
 let store = createStore(rootReducers, applyMiddleware(thunk))
 
 type RootReducerType = typeof rootReducers
 export type AppStateType = ReturnType<RootReducerType>
 
-
 export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
-
-// @ts-ignore
-window.store = store;
 
 export default store;
